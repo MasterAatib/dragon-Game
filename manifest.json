@@ -1,0 +1,73 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "min_engine_version": [
+      1,
+      21,
+      120
+    ],
+    "uuid": "864a1b85-1eef-40a8-9bf6-c4fdd773808a",
+    "version": [
+      2,
+      1,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "5f5e180d-fb1b-4a30-aa6f-cf18545f417b",
+      "version": [
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "label",
+      "text": "If you downloaded this pack from anywhere other than the places listed below or MCPEDL, you downloaded a §lstolen version§r. Please §lreport it§r to our Discord server so we can create a §lcopyright takedown request.§r"
+    },
+    {
+      "type": "input",
+      "default": "https://www.youtube.com/@S3XT4ofc",
+      "text": "YouTube",
+      "name": "yt"
+    },
+    {
+      "type": "input",
+      "default": "discord.gg/d2j6aUTvq4",
+      "text": "Discord",
+      "name": "dc"
+    },
+    {
+      "type": "input",
+      "default": "https://s3xt4-studio.github.io/Age-of-Berk-Add-on-Information/",
+      "text": "Website",
+      "name": "ws"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "fb0b0c3f-b4f3-4d45-b1d9-af8cbeed7638",
+      "version": [
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "generated_with": {
+      "bridge": [
+        "2.7.41"
+      ],
+      "dash": [
+        "0.11.7"
+      ]
+    }
+  }
+}
