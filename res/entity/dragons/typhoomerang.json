@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:typhoomerang",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/typhoomerang/red",
+        "cyan": "textures/entity/typhoomerang/cyan",
+        "green": "textures/entity/typhoomerang/green",
+        "yellow": "textures/entity/typhoomerang/yellow",
+        "purple": "textures/entity/typhoomerang/purple",
+        "black": "textures/entity/typhoomerang/black"
+      },
+      "geometry": {
+        "default": "geometry.typhoomerang"
+      },
+      "animations": {
+        "main_controller": "controller.animation.typhoomerang.main",
+        "fly": "animation.typhoomerang.fly",
+        "air_idle": "animation.typhoomerang.fly_idle",
+        "walk": "animation.typhoomerang.walk",
+        "idle": "animation.typhoomerang.idle",
+        "glide": "animation.typhoomerang.glide",
+        "sit": "animation.typhoomerang.sit",
+        "sleep": "animation.typhoomerang.sleep",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.typhoomerang"
+      ],
+      "spawn_egg": {
+        "base_color": "#a22121",
+        "overlay_color": "#ebedf2"
+      }
+    }
+  }
+}

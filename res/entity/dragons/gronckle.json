@@ -1,0 +1,70 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:gronckle",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/gronckle/brown",
+        "orange": "textures/entity/gronckle/orange",
+        "green": "textures/entity/gronckle/green",
+        "pink": "textures/entity/gronckle/pink",
+        "purple": "textures/entity/gronckle/purple",
+        "black": "textures/entity/gronckle/black",
+        "cyan": "textures/entity/gronckle/cyan",
+        "lime": "textures/entity/gronckle/lime",
+        "red": "textures/entity/gronckle/red",
+        "amethyst": "textures/entity/gronckle/amethyst",
+        "ice": "textures/entity/gronckle/ice",
+        "zombie": "textures/entity/gronckle/zombie",
+        "baby_brown": "textures/entity/gronckle/baby_brown",
+        "baby_orange": "textures/entity/gronckle/baby_orange",
+        "baby_green": "textures/entity/gronckle/baby_green",
+        "baby_pink": "textures/entity/gronckle/baby_pink",
+        "baby_purple": "textures/entity/gronckle/baby_purple",
+        "baby_black": "textures/entity/gronckle/baby_black",
+        "baby_cyan": "textures/entity/gronckle/baby_cyan",
+        "baby_lime": "textures/entity/gronckle/baby_lime",
+        "baby_red": "textures/entity/gronckle/baby_red",
+        "baby_amethyst": "textures/entity/gronckle/baby_purple",
+        "baby_ice": "textures/entity/gronckle/baby_ice",
+        "baby_zombie": "textures/entity/gronckle/baby_zombie",
+        "none": "textures/entity/llama/decor/decor_none"
+      },
+      "geometry": {
+        "default": "geometry.gronckle",
+        "baby": "geometry.baby_gronckle"
+      },
+      "animations": {
+        "main_controller": "controller.animation.gronckle.main",
+        "walk": "animation.gronckle.walk",
+        "idle": "animation.gronckle.idle",
+        "fly": "animation.gronckle.fly",
+        "air_idle": "animation.gronckle.air_idle",
+        "sit": "animation.gronckle.sit",
+        "bite": "animation.gronckle.bite",
+        "fire_ball": "animation.gronckle.fire_ball",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.gronckle"
+      ],
+      "spawn_egg": {
+        "base_color": "#724527",
+        "overlay_color": "#9D6F57"
+      }
+    }
+  }
+}

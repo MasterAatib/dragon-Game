@@ -1,0 +1,61 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:sentinel",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/sentinel/sentinel",
+        "baby": "textures/entity/sentinel/baby"
+      },
+      "geometry": {
+        "default": "geometry.sentinel",
+        "baby": "geometry.baby_sentinel"
+      },
+      "animations": {
+        "main_controller": "controller.animation.sentinel.main",
+        "baby_controller": "controller.animation.sentinel.baby",
+        "attack_controller": "controller.animation.sentinel.attack",
+        "walk": "animation.sentinel.walk",
+        "idle": "animation.sentinel.idle",
+        "fly": "animation.sentinel.fly",
+        "hover": "animation.sentinel.hover",
+        "glide": "animation.sentinel.glide",
+        "frozen": "animation.sentinel.frozen",
+        "blast": "animation.sentinel.attack",
+        "baby_walk": "animation.baby_sentinel.walk",
+        "baby_idle": "animation.baby_sentinel.idle",
+        "baby_fly": "animation.baby_sentinel.fly",
+        "baby_hover": "animation.baby_sentinel.hover",
+        "baby_sit": "animation.baby_sentinel.sit",
+        "look_at_target": "animation.common.look_at_target",
+        "none": "animation.dragon.none",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "attack_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          },
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.sentinel"
+      ],
+      "spawn_egg": {
+        "base_color": "#889182",
+        "overlay_color": "#496a2d"
+      }
+    }
+  }
+}

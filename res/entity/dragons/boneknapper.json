@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:boneknapper",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/boneknapper/white"
+      },
+      "geometry": {
+        "default": "geometry.boneknapper"
+      },
+      "animations": {
+        "main_controller": "controller.animation.boneknapper.main",
+        "walk": "animation.boneknapper.walk",
+        "idle": "animation.boneknapper.idle",
+        "fly": "animation.boneknapper.fly",
+        "hover": "animation.boneknapper.hover",
+        "sit": "animation.boneknapper.sit",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          },
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.boneknapper"
+      ],
+      "spawn_egg": {
+        "base_color": "#dfdada",
+        "overlay_color": "#737869"
+      }
+    }
+  }
+}

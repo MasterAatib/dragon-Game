@@ -1,0 +1,60 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:snow_wraith",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/snow_wraith/white",
+        "baby": "textures/entity/snow_wraith/baby"
+      },
+      "geometry": {
+        "default": "geometry.snow_wraith",
+        "baby": "geometry.baby_snow_wraith"
+      },
+      "animations": {
+        "idle_controller": "controller.animation.snow_wraith.idle",
+        "baby_controller": "controller.animation.snow_wraith.baby",
+        "main_controller": "controller.animation.snow_wraith.main",
+        "walk": "animation.snow_wraith.walk",
+        "idle": "animation.snow_wraith.idle",
+        "idle_special": "animation.snow_wraith.idle_special",
+        "fly": "animation.snow_wraith.fly",
+        "glide": "animation.snow_wraith.fly",
+        "sit": "animation.snow_wraith.sit",
+        "sleep": "animation.snow_wraith.sleep",
+        "bite": "animation.snow_wraith.bite",
+        "baby_walk": "animation.baby_snow_wraith.walk",
+        "baby_idle": "animation.baby_snow_wraith.idle",
+        "baby_fly": "animation.baby_snow_wraith.fly",
+        "baby_glide": "animation.baby_snow_wraith.fly",
+        "baby_sit": "animation.baby_snow_wraith.sit",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          },
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.snow_wraith"
+      ],
+      "spawn_egg": {
+        "base_color": "#FFFFFF",
+        "overlay_color": "#FFFFFF"
+      }
+    }
+  }
+}

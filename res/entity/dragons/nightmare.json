@@ -1,0 +1,76 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:nightmare",
+      "materials": {
+        "default": "entity_alphatest",
+        "fire": "charged_creeper"
+      },
+      "textures": {
+        "default": "textures/entity/nightmare/red",
+        "blue": "textures/entity/nightmare/blue",
+        "green": "textures/entity/nightmare/green",
+        "purple": "textures/entity/nightmare/purple",
+        "pink": "textures/entity/nightmare/pink",
+        "yellow": "textures/entity/nightmare/yellow",
+        "lime": "textures/entity/nightmare/lime",
+        "pale": "textures/entity/nightmare/pale",
+        "black": "textures/entity/nightmare/black",
+        "light_pink": "textures/entity/nightmare/light_pink",
+        "baby_red": "textures/entity/nightmare/baby_red",
+        "baby_blue": "textures/entity/nightmare/baby_blue",
+        "baby_green": "textures/entity/nightmare/baby_green",
+        "baby_purple": "textures/entity/nightmare/baby_purple",
+        "baby_pink": "textures/entity/nightmare/baby_pink",
+        "baby_yellow": "textures/entity/nightmare/baby_yellow",
+        "baby_lime": "textures/entity/nightmare/baby_lime",
+        "baby_pale": "textures/entity/nightmare/baby_pale",
+        "baby_black": "textures/entity/nightmare/baby_black",
+        "baby_light_pink": "textures/entity/nightmare/baby_light_pink"
+      },
+      "geometry": {
+        "default": "geometry.monstrous_nightmare",
+        "baby": "geometry.baby_nightmare",
+        "pale": "geometry.pale_nightmare"
+      },
+      "animations": {
+        "main_controller": "controller.animation.nightmare.main",
+        "baby_controller": "controller.animation.nightmare.baby",
+        "walk": "animation.nightmare.walk",
+        "idle": "animation.nightmare.idle",
+        "fly": "animation.nightmare.fly",
+        "hover": "animation.nightmare.hover",
+        "glide": "animation.nightmare.glide",
+        "sit": "animation.nightmare.sit",
+        "baby_walk": "animation.baby_nightmare.walk",
+        "baby_idle": "animation.baby_nightmare.idle",
+        "baby_fly": "animation.baby_nightmare.fly",
+        "baby_sit": "animation.baby_nightmare.sit",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          },
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.nightmare"
+      ],
+      "spawn_egg": {
+        "base_color": "#9F3D3D",
+        "overlay_color": "#120D0D"
+      }
+    }
+  }
+}

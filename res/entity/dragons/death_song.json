@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:death_song",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/death_song/death_song",
+        "light": "textures/entity/death_song/light",
+        "dark": "textures/entity/death_song/dark"
+      },
+      "geometry": {
+        "default": "geometry.death_song"
+      },
+      "animations": {
+        "main_controller": "controller.animation.death_song.main",
+        "walk": "animation.death_song.walk",
+        "idle": "animation.death_song.idle",
+        "fly": "animation.death_song.fly",
+        "hover": "animation.death_song.hover",
+        "glide": "animation.death_song.glide",
+        "sit": "animation.death_song.sit",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          },
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.death_song"
+      ],
+      "spawn_egg": {
+        "base_color": "#e8a20f",
+        "overlay_color": "#616e9e"
+      }
+    }
+  }
+}

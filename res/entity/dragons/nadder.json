@@ -1,0 +1,84 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:nadder",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nadder/blue",
+        "purple": "textures/entity/nadder/purple",
+        "orange": "textures/entity/nadder/orange",
+        "pink": "textures/entity/nadder/pink",
+        "dark_blue": "textures/entity/nadder/dark_blue",
+        "red": "textures/entity/nadder/red",
+        "black": "textures/entity/nadder/black",
+        "rose": "textures/entity/nadder/rose",
+        "green": "textures/entity/nadder/green",
+        "cyan": "textures/entity/nadder/cyan",
+        "turquoise": "textures/entity/nadder/turquoise",
+        "skeleton": "textures/entity/nadder/skeleton",
+        "ghost": "textures/entity/nadder/ghost",
+        "baby_blue": "textures/entity/nadder/baby_blue",
+        "baby_purple": "textures/entity/nadder/baby_purple",
+        "baby_orange": "textures/entity/nadder/baby_orange",
+        "baby_pink": "textures/entity/nadder/baby_pink",
+        "baby_dark_blue": "textures/entity/nadder/baby_dark_blue",
+        "baby_red": "textures/entity/nadder/baby_red",
+        "baby_black": "textures/entity/nadder/baby_black",
+        "baby_rose": "textures/entity/nadder/baby_rose",
+        "baby_green": "textures/entity/nadder/baby_green",
+        "baby_cyan": "textures/entity/nadder/baby_cyan",
+        "baby_turquoise": "textures/entity/nadder/baby_turquoise",
+        "baby_skeleton": "textures/entity/nadder/baby_skeleton",
+        "baby_ghost": "textures/entity/nadder/baby_ghost"
+      },
+      "geometry": {
+        "default": "geometry.nadder",
+        "baby": "geometry.baby_nadder"
+      },
+      "animations": {
+        "main_controller": "controller.animation.nadder.main",
+        "idle_controller": "controller.animation.nadder.idle",
+        "baby_controller": "controller.animation.nadder.baby",
+        "baby_walk": "animation.baby_nadder.walk",
+        "baby_idle": "animation.baby_nadder.idle",
+        "baby_fly": "animation.baby_nadder.fly",
+        "baby_sit": "animation.baby_nadder.sit",
+        "baby_hover": "animation.baby_nadder.hover",
+        "idle": "animation.nadder.idle",
+        "idle_special": "animation.nadder.idle2",
+        "walk": "animation.nadder.walk",
+        "fly": "animation.nadder.fly",
+        "hover": "animation.nadder.hover",
+        "sit": "animation.nadder.sit",
+        "glide": "animation.nadder.glide",
+        "blast": "animation.nadder.blast",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          },
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.nadder"
+      ],
+      "spawn_egg": {
+        "base_color": "#3D7E9F",
+        "overlay_color": "#B9BD41"
+      }
+    }
+  }
+}

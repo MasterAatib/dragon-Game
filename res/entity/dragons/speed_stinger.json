@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:speed_stinger",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/speed_stinger/blue",
+        "alpha": "textures/entity/speed_stinger/alpha",
+        "yellow": "textures/entity/speed_stinger/yellow",
+        "kaiju": "textures/entity/speed_stinger/kaiju",
+        "white": "textures/entity/speed_stinger/white",
+        "baby_default": "textures/entity/speed_stinger/baby_blue",
+        "baby_alpha": "textures/entity/speed_stinger/baby_alpha",
+        "baby_yellow": "textures/entity/speed_stinger/baby_yellow",
+        "baby_kaiju": "textures/entity/speed_stinger/baby_kaiju",
+        "baby_white": "textures/entity/speed_stinger/baby_white"
+      },
+      "geometry": {
+        "default": "geometry.speed_stinger",
+        "baby": "geometry.baby_speed_stinger"
+      },
+      "animations": {
+        "main_controller": "controller.animation.speed_stinger.main",
+        "sniff_controller": "controller.animation.speed_stinger.sniff",
+        "idle_controller": "controller.animation.speed_stinger.idle",
+        "attack_controller": "controller.animation.speed_stinger.attack",
+        "baby_controller": "controller.animation.speed_stinger.baby",
+        "idle": "animation.speed_stinger.idle",
+        "idle_special": "animation.speed_stinger.idle_special",
+        "walk": "animation.speed_stinger.walk",
+        "run": "animation.speed_stinger.run",
+        "sit": "animation.speed_stinger.sit",
+        "sniff": "animation.speed_stinger.sniff",
+        "attack": "animation.speed_stinger.delayed_attack",
+        "sleep": "animation.speed_stinger.sleep",
+        "baby_idle": "animation.speed_stinger.idle",
+        "baby_walk": "animation.speed_stinger.baby_walk",
+        "baby_run": "animation.speed_stinger.baby_run",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          },
+          "attack_controller",
+          "sniff_controller",
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.speed_stinger"
+      ],
+      "spawn_egg": {
+        "base_color": "#8fbd96",
+        "overlay_color": "#96382c"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:deathgripper_fireball",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/deathgripper/acid"
+      },
+      "geometry": {
+        "default": "geometry.deathgripper_fireball"
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard",
+        "particle": "animation.deathgripper_fireball.particles"
+      },
+      "scripts": {
+        "animate": [
+          "particle",
+          "face_player"
+        ]
+      },
+      "particle_effects": {
+        "particle": "httyd:deathgripper_acid_particle"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

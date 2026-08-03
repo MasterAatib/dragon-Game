@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "httyd:dragon_blade",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/items/dragon_blade/frame_0",
+        "frame_1": "textures/items/dragon_blade/frame_1",
+        "frame_2": "textures/items/dragon_blade/frame_2",
+        "frame_3": "textures/items/dragon_blade/frame_3",
+        "frame_4": "textures/items/dragon_blade/frame_4",
+        "frame_5": "textures/items/dragon_blade/frame_5",
+        "frame_6": "textures/items/dragon_blade/frame_6",
+        "frame_7": "textures/items/dragon_blade/frame_7",
+        "frame_8": "textures/items/dragon_blade/frame_8"
+      },
+      "geometry": {
+        "default": "geometry.dragon_blade"
+      },
+      "animations": {
+        "hold_first_person": "animation.dragon_blade.hold_first_person",
+        "hold_third_person": "animation.dragon_blade.hold_third_person",
+        "ignite": "animation.dragon_blade.ignite",
+        "retract": "animation.dragon_blade.retract",
+        "unlit": "animation.dragon_blade.unlit",
+        "retract_controller": "controller.animation.dragon_blade.retract"
+      },
+      "scripts": {
+        "animate": [
+          "retract_controller",
+          {
+            "hold_first_person": "context.is_first_person == 1.0"
+          },
+          {
+            "hold_third_person": "context.is_first_person == 0.0"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.dragon_blade"
+      ]
+    }
+  }
+}

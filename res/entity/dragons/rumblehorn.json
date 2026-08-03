@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:rumblehorn",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/rumblehorn/green",
+        "blue": "textures/entity/rumblehorn/blue"
+      },
+      "geometry": {
+        "default": "geometry.rumblehorn"
+      },
+      "animations": {
+        "main_controller": "controller.animation.rumblehorn.main",
+        "walk": "animation.rumblehorn.walk",
+        "idle": "animation.rumblehorn.idle",
+        "fly": "animation.rumblehorn.fly",
+        "glide": "animation.rumblehorn.glide",
+        "hover": "animation.rumblehorn.hover",
+        "breath": "animation.rumblehorn.breath",
+        "sit": "animation.rumblehorn.sit",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.rumblehorn"
+      ],
+      "spawn_egg": {
+        "base_color": "#396C0D",
+        "overlay_color": "#9D0D0D"
+      }
+    }
+  }
+}

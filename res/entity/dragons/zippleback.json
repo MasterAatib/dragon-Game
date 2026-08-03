@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:zippleback",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/zippleback/green",
+        "dark_red": "textures/entity/zippleback/dark_red",
+        "purple": "textures/entity/zippleback/purple",
+        "red": "textures/entity/zippleback/red",
+        "light_blue": "textures/entity/zippleback/light_blue",
+        "yellow": "textures/entity/zippleback/yellow",
+        "blue": "textures/entity/zippleback/blue",
+        "gray": "textures/entity/zippleback/gray",
+        "baby_green": "textures/entity/zippleback/baby_green",
+        "baby_dark_red": "textures/entity/zippleback/baby_dark_red",
+        "baby_purple": "textures/entity/zippleback/baby_purple",
+        "baby_red": "textures/entity/zippleback/baby_red",
+        "baby_light_blue": "textures/entity/zippleback/baby_light_blue",
+        "baby_yellow": "textures/entity/zippleback/baby_yellow",
+        "baby_blue": "textures/entity/zippleback/baby_blue",
+        "baby_gray": "textures/entity/zippleback/baby_gray"
+      },
+      "geometry": {
+        "default": "geometry.zippleback",
+        "baby": "geometry.baby_zippleback"
+      },
+      "animations": {
+        "main_controller": "controller.animation.zippleback.main",
+        "walk": "animation.zippleback.walk",
+        "idle": "animation.zippleback.idle",
+        "fly": "animation.zippleback.fly",
+        "sit": "animation.zippleback.sit",
+        "baby_sit": "animation.zippleback.baby_sit",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.zippleback"
+      ],
+      "spawn_egg": {
+        "base_color": "#629b41",
+        "overlay_color": "#a13632"
+      }
+    }
+  }
+}

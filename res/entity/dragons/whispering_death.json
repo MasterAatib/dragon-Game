@@ -1,0 +1,55 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:whispering_death",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/whispering_death/green",
+        "blue": "textures/entity/whispering_death/blue",
+        "purple": "textures/entity/whispering_death/purple",
+        "baby_green": "textures/entity/whispering_death/baby_green",
+        "baby_blue": "textures/entity/whispering_death/baby_blue",
+        "baby_purple": "textures/entity/whispering_death/baby_purple",
+        "none": "textures/entity/llama/decor/decor_none"
+      },
+      "geometry": {
+        "default": "geometry.whispering_death",
+        "baby": "geometry.baby_whispering_death"
+      },
+      "animations": {
+        "main_controller": "controller.animation.whispering_death.main",
+        "walk": "animation.whispering_death.walk",
+        "idle": "animation.whispering_death.idle",
+        "fly": "animation.whispering_death.flapping",
+        "air_idle": "animation.whispering_death.idle_flapping",
+        "sit": "animation.whispering_death.sit",
+        "bite": "animation.whispering_death.bite",
+        "spawn": "animation.whispering_death.spawning",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "particle_effects": {
+        "digging": "httyd:whispering_death_dig"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.whispering_death"
+      ],
+      "spawn_egg": {
+        "base_color": "#3f4231",
+        "overlay_color": "#552424"
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:deathgripper",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/deathgripper/red",
+        "blue": "textures/entity/deathgripper/blue",
+        "green": "textures/entity/deathgripper/green",
+        "orange": "textures/entity/deathgripper/orange",
+        "purple": "textures/entity/deathgripper/purple",
+        "blue_morpho": "textures/entity/deathgripper/blue_morpho",
+        "monarch": "textures/entity/deathgripper/monarch",
+        "hornet": "textures/entity/deathgripper/hornet",
+        "hollow": "textures/entity/deathgripper/hollow",
+        "demon": "textures/entity/deathgripper/demon"
+      },
+      "geometry": {
+        "default": "geometry.deathgripper",
+        "baby": "geometry.deathgripper"
+      },
+      "animations": {
+        "main_controller": "controller.animation.deathgripper.main",
+        "idle": "animation.deathgripper.idle",
+        "walk": "animation.deathgripper.walk",
+        "fly": "animation.deathgripper.fly",
+        "hover": "animation.deathgripper.hover",
+        "glide": "animation.deathgripper.glide",
+        "sit": "animation.deathgripper.sit",
+        "fire_ball": "animation.deathgripper.breath",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "particle_effects": {
+        "acid": "httyd:deathgripper_acid_breath_particle"
+      },
+      "render_controllers": [
+        "controller.render.deathgripper"
+      ],
+      "spawn_egg": {
+        "base_color": "#130b0d",
+        "overlay_color": "#780a10"
+      }
+    }
+  }
+}

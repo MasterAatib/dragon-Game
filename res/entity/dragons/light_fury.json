@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:light_fury",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/light_fury/light_fury",
+        "none": "textures/entity/llama/decor/decor_none",
+        "baby": "textures/entity/light_fury/baby"
+      },
+      "geometry": {
+        "default": "geometry.light_fury",
+        "baby": "geometry.baby_fury"
+      },
+      "animations": {
+        "main_controller": "controller.animation.light_fury.main",
+        "walk": "animation.light_fury.walk",
+        "idle": "animation.light_fury.idle",
+        "fly": "animation.light_fury.fly",
+        "hover": "animation.light_fury.hover",
+        "glide": "animation.light_fury.glide",
+        "sit": "animation.light_fury.sit",
+        "caged": "animation.light_fury.sit",
+        "fire_ball": "animation.light_fury.breath",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.light_fury"
+      ],
+      "spawn_egg": {
+        "base_color": "#FFFFFF",
+        "overlay_color": "#B0FBFF"
+      }
+    }
+  }
+}

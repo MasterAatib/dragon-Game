@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:lava_blast",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/blocks/lava_placeholder"
+      },
+      "geometry": {
+        "default": "geometry.lava_blast"
+      },
+      "render_controllers": [
+        "controller.render.lava_blast"
+      ],
+      "animations": {
+        "flying": "animation.lava_blast.flying"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+}

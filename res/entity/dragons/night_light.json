@@ -1,0 +1,62 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:night_light",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "pouncer": "textures/entity/night_light/pouncer",
+        "ruffrunner": "textures/entity/night_light/ruffrunner",
+        "dart": "textures/entity/night_light/dart",
+        "thunder": "textures/entity/night_light/thunder",
+        "black_ears": "textures/entity/night_light/black_ears",
+        "black_chest": "textures/entity/night_light/black_chest",
+        "baby_pouncer": "textures/entity/night_light/baby_pouncer",
+        "baby_ruffrunner": "textures/entity/night_light/baby_ruffrunner",
+        "baby_dart": "textures/entity/night_light/baby_dart",
+        "baby_thunder": "textures/entity/night_light/baby_thunder",
+        "baby_black_ears": "textures/entity/night_light/baby_black_ears",
+        "baby_black_chest": "textures/entity/night_light/baby_black_chest",
+        "saddle": "textures/entity/night_light/saddle"
+      },
+      "geometry": {
+        "default": "geometry.night_light",
+        "baby": "geometry.baby_fury"
+      },
+      "animations": {
+        "main_controller": "controller.animation.night_fury.main",
+        "walk": "animation.night_fury.walk",
+        "idle": "animation.night_fury.idle",
+        "fly": "animation.night_fury.fly",
+        "hover": "animation.night_fury.hover",
+        "glide": "animation.night_fury.glide",
+        "sleep": "animation.night_fury.sleep",
+        "sit": "animation.night_fury.sit",
+        "fire_ball": "animation.night_fury.breath",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        {
+          "controller.render.night_light_saddle": "query.property('httyd:has_saddle')"
+        },
+        "controller.render.night_light"
+      ],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#F6F6F6"
+      }
+    }
+  }
+}

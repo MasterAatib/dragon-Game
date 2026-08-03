@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:red_death",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/red_death/red_death"
+      },
+      "geometry": {
+        "default": "geometry.red_death"
+      },
+      "animations": {
+        "main_controller": "controller.animation.red_death.main",
+        "attack_controller": "controller.animation.red_death.attack",
+        "walk": "animation.red_death.walk",
+        "idle": "animation.red_death.idle",
+        "roar": "animation.red_death.roar",
+        "fly": "animation.red_death.fly",
+        "breath": "animation.red_death.breath",
+        "hover": "animation.red_death.hover",
+        "sleep": "animation.red_death.sleep",
+        "bite": "animation.red_death.bite",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          "attack_controller",
+          "main_controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#27505E",
+        "overlay_color": "#751616"
+      }
+    }
+  }
+}

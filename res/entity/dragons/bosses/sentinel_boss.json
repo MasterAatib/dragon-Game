@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:sentinel_boss",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/sentinel/sentinel",
+        "baby": "textures/entity/sentinel/baby"
+      },
+      "geometry": {
+        "default": "geometry.sentinel",
+        "baby": "geometry.baby_sentinel"
+      },
+      "animations": {
+        "main_controller": "controller.animation.sentinel_boss.main",
+        "attack_controller": "controller.animation.sentinel.attack",
+        "none": "animation.dragon.none",
+        "walk": "animation.sentinel.walk",
+        "idle": "animation.sentinel.idle",
+        "fly": "animation.sentinel.fly",
+        "hover": "animation.sentinel.hover",
+        "glide": "animation.sentinel.glide",
+        "frozen": "animation.sentinel.frozen",
+        "blast": "animation.sentinel.attack",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "attack_controller",
+          {
+            "look_at_target": "!query.property('httyd:frozen')"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.sentinel"
+      ],
+      "spawn_egg": {
+        "base_color": "#889182",
+        "overlay_color": "#496a2d"
+      }
+    }
+  }
+}

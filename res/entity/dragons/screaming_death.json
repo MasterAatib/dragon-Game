@@ -1,0 +1,56 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:screaming_death",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/screaming_death/white",
+        "baby": "textures/entity/screaming_death/baby"
+      },
+      "geometry": {
+        "default": "geometry.screaming_death",
+        "baby": "geometry.baby_screaming_death"
+      },
+      "animations": {
+        "main_controller": "controller.animation.screaming_death.main",
+        "baby_controller": "controller.animation.screaming_death.baby",
+        "walk": "animation.screaming_death.walk",
+        "idle": "animation.screaming_death.idle",
+        "fly": "animation.screaming_death.flapping",
+        "air_idle": "animation.screaming_death.idle_flapping",
+        "sit": "animation.screaming_death.sit",
+        "baby_walk": "animation.baby_screaming_death.walk",
+        "baby_idle": "animation.baby_screaming_death.idle",
+        "baby_fly": "animation.baby_screaming_death.flapping",
+        "baby_air_idle": "animation.baby_screaming_death.idle_flapping",
+        "baby_sit": "animation.baby_screaming_death.sit",
+        "spawn": "animation.screaming_death.spawning",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "particle_effects": {
+        "digging": "httyd:whispering_death_dig"
+      },
+      "scripts": {
+        "animate": [
+          "look_at_target",
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.screaming_death"
+      ],
+      "spawn_egg": {
+        "base_color": "#ffffff",
+        "overlay_color": "#c70000"
+      }
+    }
+  }
+}

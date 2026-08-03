@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:hobgobbler",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/hobgobbler/purple",
+        "blue": "textures/entity/hobgobbler/blue",
+        "green": "textures/entity/hobgobbler/green",
+        "gray": "textures/entity/hobgobbler/gray",
+        "white": "textures/entity/hobgobbler/white",
+        "orange": "textures/entity/hobgobbler/orange",
+        "yellow": "textures/entity/hobgobbler/yellow",
+        "dark_blue": "textures/entity/hobgobbler/dark_blue",
+        "skeleton": "textures/entity/hobgobbler/skeleton"
+      },
+      "enable_attachables": true,
+      "geometry": {
+        "default": "geometry.hobgobbler"
+      },
+      "animations": {
+        "main_controller": "controller.animation.hobgobbler.main",
+        "idle_controller": "controller.animation.hobgobbler.idle",
+        "idle": "animation.hobgobbler.idle",
+        "idle_special": "animation.hobgobbler.idle_special",
+        "walk": "animation.hobgobbler.walk",
+        "fly": "animation.hobgobbler.fly",
+        "breath": "animation.hobgobbler.breath",
+        "sleep": "animation.hobgobbler.sleep",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "idle_controller",
+          {
+            "look_at_target": "!query.property('httyd:sleeping')&&!query.property('httyd:sitting')"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.hobgobbler"
+      ],
+      "spawn_egg": {
+        "base_color": "#681c98",
+        "overlay_color": "#dcbd52"
+      }
+    }
+  }
+}

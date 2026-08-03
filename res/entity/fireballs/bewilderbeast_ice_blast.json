@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:bewilderbeast_ice_blast",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/items/snowball"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "face_player"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_sprite"
+      ]
+    }
+  }
+}

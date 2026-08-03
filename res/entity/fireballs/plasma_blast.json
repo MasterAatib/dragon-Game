@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:plasma_blast",
+      "materials": {
+        "default": "entity_beam_additive"
+      },
+      "textures": {
+        "default": "textures/entity/night_fury/plasma_blast"
+      },
+      "geometry": {
+        "default": "geometry.plasma_blast"
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "face_player"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

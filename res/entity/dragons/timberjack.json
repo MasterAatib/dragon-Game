@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:timberjack",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/timberjack/timberjack",
+        "baby": "textures/entity/timberjack/baby"
+      },
+      "geometry": {
+        "default": "geometry.timberjack",
+        "baby": "geometry.baby_timberjack"
+      },
+      "animations": {
+        "main_controller": "controller.animation.timberjack.main",
+        "baby_controller": "controller.animation.timberjack.baby",
+        "baby_walk": "animation.baby_timberjack.walk",
+        "baby_idle": "animation.baby_timberjack.idle",
+        "baby_bite": "animation.baby_timberjack.bite",
+        "fly": "animation.timberjack.fly",
+        "air_idle": "animation.timberjack.air_idle",
+        "walk": "animation.timberjack.walk",
+        "idle": "animation.timberjack.idle",
+        "glide": "animation.timberjack.glide",
+        "fire_ball": "animation.timberjack.fire_ball",
+        "flamethrower": "animation.timberjack.flamethrower",
+        "bite": "animation.timberjack.bite",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "main_controller": "!query.is_baby"
+          },
+          {
+            "baby_controller": "query.is_baby"
+          },
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.timberjack"
+      ],
+      "spawn_egg": {
+        "base_color": "#6A5829",
+        "overlay_color": "#9F6F4D"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:dragon_cage",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/dragon_cage"
+      },
+      "geometry": {
+        "default": "geometry.dragon_cage",
+        "square": "geometry.dragon_cage_square"
+      },
+      "animations": {
+        "closed": "animation.dragon_cage.closed",
+        "open": "animation.dragon_cage.open",
+        "dragon_cage_controller": "controller.animation.dragon_cage"
+      },
+      "scripts": {
+        "scale": "(1.8)",
+        "animate": [
+          "dragon_cage_controller"
+        ]
+      },
+      "sound_effects": {
+        "open": "mob.dragon_cage.open"
+      },
+      "render_controllers": [
+        "controller.render.dragon_cage"
+      ]
+    }
+  }
+}

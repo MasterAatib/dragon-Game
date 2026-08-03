@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "httyd:book_of_dragons_pg19",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/items/book_of_dragons/book_of_dragons",
+        "page": "textures/items/book_of_dragons/page_19"
+      },
+      "geometry": {
+        "default": "geometry.book_of_dragons",
+        "page": "geometry.book_of_dragons_page"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "book_hold_first_person": "context.is_first_person == 1.0"
+          },
+          {
+            "book_hold_third_person": "context.is_first_person == 0.0"
+          }
+        ]
+      },
+      "animations": {
+        "book_hold_first_person": "animation.book_of_dragons.first_person_open",
+        "book_hold_third_person": "animation.book_of_dragons.third_person_open"
+      },
+      "render_controllers": [
+        "controller.render.book_of_dragons_page",
+        "controller.render.default"
+      ]
+    }
+  }
+}

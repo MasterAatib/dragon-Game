@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:amber_chunk",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/death_song/amber",
+        "gel": "textures/entity/death_song/gel_amber"
+      },
+      "geometry": {
+        "small": "geometry.small_amber",
+        "medium": "geometry.medium_amber",
+        "large": "geometry.large_amber"
+      },
+      "render_controllers": [
+        "controller.render.amber_chunk"
+      ]
+    }
+  }
+}

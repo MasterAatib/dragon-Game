@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:pale_nightmare",
+      "geometry": {
+        "default": "geometry.arrow"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/llama/decor/decor_none"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#8C8C8C",
+        "overlay_color": "#393939"
+      }
+    }
+  }
+}

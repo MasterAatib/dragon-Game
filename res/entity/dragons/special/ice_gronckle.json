@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:ice_gronckle",
+      "geometry": {
+        "default": "geometry.arrow"
+      },
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/llama/decor/decor_none"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#1F4A65",
+        "overlay_color": "#A2E7EF"
+      }
+    }
+  }
+}

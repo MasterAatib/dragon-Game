@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:amber_blast",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/entity/death_song/amber"
+      },
+      "geometry": {
+        "default": "geometry.small_amber"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

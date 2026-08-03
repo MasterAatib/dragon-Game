@@ -1,0 +1,63 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:skrill",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/skrill/dark",
+        "gray": "textures/entity/skrill/gray",
+        "green": "textures/entity/skrill/green",
+        "magenta": "textures/entity/skrill/magenta",
+        "orange": "textures/entity/skrill/orange",
+        "pink": "textures/entity/skrill/pink",
+        "purple": "textures/entity/skrill/purple",
+        "red": "textures/entity/skrill/red",
+        "blue": "textures/entity/skrill/blue",
+        "skeleton": "textures/entity/skrill/skeleton",
+        "saddle": "textures/entity/skrill/saddle"
+      },
+      "geometry": {
+        "default": "geometry.skrill"
+      },
+      "animations": {
+        "main_controller": "controller.animation.skrill.main",
+        "attack_controller": "controller.animation.skrill.attack",
+        "walk": "animation.skrill.walk",
+        "idle": "animation.skrill.idle",
+        "fly": "animation.skrill.fly",
+        "glide": "animation.skrill.glide",
+        "sit": "animation.skrill.sit",
+        "blast": "animation.skrill.breath",
+        "hover": "animation.skrill.hover",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "particle_effects": {
+        "lightning_burst": "httyd:lightning_burst"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "attack_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        {
+          "controller.render.skrill_saddle": "query.property('httyd:has_saddle')"
+        },
+        "controller.render.skrill"
+      ],
+      "spawn_egg": {
+        "base_color": "#101018",
+        "overlay_color": "#37163f"
+      }
+    }
+  }
+}

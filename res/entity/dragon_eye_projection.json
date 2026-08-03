@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:dragon_eye_projection",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/dragon_eye_projections/default",
+        "sentinel": "textures/entity/dragon_eye_projections/sentinel",
+        "boneknapper": "textures/entity/dragon_eye_projections/boneknapper",
+        "red_death": "textures/entity/dragon_eye_projections/red_death",
+        "bewilderbeast": "textures/entity/dragon_eye_projections/bewilderbeast",
+        "screaming_death": "textures/entity/dragon_eye_projections/screaming_death",
+        "death_song": "textures/entity/dragon_eye_projections/death_song"
+      },
+      "geometry": {
+        "default": "geometry.dragon_eye_projection"
+      },
+      "render_controllers": [
+        "controller.render.dragon_eye_projection"
+      ]
+    }
+  }
+}

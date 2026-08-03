@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:flamewhipper",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/flamewhipper/blue",
+        "tiger": "textures/entity/flamewhipper/tiger",
+        "red": "textures/entity/flamewhipper/red",
+        "orange": "textures/entity/flamewhipper/orange",
+        "yellow": "textures/entity/flamewhipper/yellow"
+      },
+      "geometry": {
+        "default": "geometry.flamewhipper"
+      },
+      "animations": {
+        "main_controller": "controller.animation.flame_whipper.main",
+        "attack_controller": "controller.animation.flame_whipper.attack_controller",
+        "walk": "animation.flamewhipper.walk",
+        "idle": "animation.flamewhipper.idle",
+        "fly": "animation.flamewhipper.fly",
+        "air_idle": "animation.flamewhipper.fly",
+        "sit": "animation.flamewhipper.sit",
+        "bite": "animation.flamewhipper.tongue_attack",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "attack_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.flame_whipper"
+      ],
+      "spawn_egg": {
+        "base_color": "#2672a8",
+        "overlay_color": "#e6d000"
+      }
+    }
+  }
+}

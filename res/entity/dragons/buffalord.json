@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:buffalord",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/buffalord/buffalord"
+      },
+      "geometry": {
+        "default": "geometry.buffalord"
+      },
+      "animations": {
+        "main_controller": "controller.animation.buffalord.main",
+        "grazing": "animation.buffalord.grazing",
+        "walk": "animation.buffalord.walk",
+        "sleep": "animation.buffalord.sleep",
+        "idle": "animation.buffalord.idle",
+        "fly": "animation.buffalord.fly",
+        "air_idle": "animation.buffalord.air_idle",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.buffalord"
+      ],
+      "spawn_egg": {
+        "base_color": "#754828",
+        "overlay_color": "#7e6355"
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:night_fury",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/night_fury/green_eyes",
+        "red_eyes": "textures/entity/night_fury/red_eyes",
+        "orange_eyes": "textures/entity/night_fury/orange_eyes",
+        "purple_eyes": "textures/entity/night_fury/purple_eyes",
+        "blue_eyes": "textures/entity/night_fury/blue_eyes",
+        "heterochromia_one": "textures/entity/night_fury/heterochromia_one",
+        "heterochromia_two": "textures/entity/night_fury/heterochromia_two",
+        "albino": "textures/entity/night_fury/albino",
+        "ocean": "textures/entity/night_fury/ocean",
+        "skeleton": "textures/entity/night_fury/skeleton",
+        "vampire": "textures/entity/night_fury/vampire",
+        "baby_green_eyes": "textures/entity/night_fury/baby_green_eyes",
+        "baby_red_eyes": "textures/entity/night_fury/baby_red_eyes",
+        "baby_orange_eyes": "textures/entity/night_fury/baby_orange_eyes",
+        "baby_purple_eyes": "textures/entity/night_fury/baby_purple_eyes",
+        "baby_blue_eyes": "textures/entity/night_fury/baby_blue_eyes",
+        "baby_heterochromia_one": "textures/entity/night_fury/baby_heterochromia_one",
+        "baby_heterochromia_two": "textures/entity/night_fury/baby_heterochromia_two",
+        "baby_albino": "textures/entity/night_fury/baby_albino",
+        "baby_ocean": "textures/entity/night_fury/baby_ocean",
+        "baby_skeleton": "textures/entity/night_fury/baby_skeleton",
+        "baby_vampire": "textures/entity/night_fury/baby_vampire",
+        "white": "textures/entity/night_fury/tailfins/white",
+        "light_gray": "textures/entity/night_fury/tailfins/light_gray",
+        "gray": "textures/entity/night_fury/tailfins/gray",
+        "black": "textures/entity/night_fury/tailfins/black",
+        "brown": "textures/entity/night_fury/tailfins/brown",
+        "red": "textures/entity/night_fury/tailfins/red",
+        "orange": "textures/entity/night_fury/tailfins/orange",
+        "yellow": "textures/entity/night_fury/tailfins/yellow",
+        "lime": "textures/entity/night_fury/tailfins/lime",
+        "green": "textures/entity/night_fury/tailfins/green",
+        "cyan": "textures/entity/night_fury/tailfins/cyan",
+        "light_blue": "textures/entity/night_fury/tailfins/light_blue",
+        "blue": "textures/entity/night_fury/tailfins/blue",
+        "purple": "textures/entity/night_fury/tailfins/purple",
+        "magenta": "textures/entity/night_fury/tailfins/magenta",
+        "pink": "textures/entity/night_fury/tailfins/pink",
+        "saddle": "textures/entity/night_fury/saddle",
+        "none": "textures/entity/night_fury/tailfins/none"
+      },
+      "geometry": {
+        "default": "geometry.night_fury",
+        "baby": "geometry.baby_fury"
+      },
+      "animations": {
+        "main_controller": "controller.animation.night_fury.main",
+        "walk": "animation.night_fury.walk",
+        "idle": "animation.night_fury.idle",
+        "fly": "animation.night_fury.fly",
+        "hover": "animation.night_fury.hover",
+        "glide": "animation.night_fury.glide",
+        "sleep": "animation.night_fury.sleep",
+        "sit": "animation.night_fury.sit",
+        "fire_ball": "animation.night_fury.breath",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "look_at_target",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        {
+          "controller.render.night_fury_tailfin": "query.property('httyd:tailfin') > 0"
+        },
+        {
+          "controller.render.night_fury_saddle": "query.property('httyd:has_saddle')"
+        },
+        "controller.render.night_fury"
+      ],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#000000"
+      }
+    }
+  }
+}

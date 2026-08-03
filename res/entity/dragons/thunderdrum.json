@@ -1,0 +1,68 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "httyd:thunderdrum",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/thunderdrum/blue",
+        "dark_blue": "textures/entity/thunderdrum/dark_blue",
+        "orange": "textures/entity/thunderdrum/orange",
+        "peach": "textures/entity/thunderdrum/peach",
+        "white": "textures/entity/thunderdrum/white",
+        "black": "textures/entity/thunderdrum/black",
+        "green": "textures/entity/thunderdrum/green",
+        "purple": "textures/entity/thunderdrum/purple",
+        "red": "textures/entity/thunderdrum/red",
+        "brown": "textures/entity/thunderdrum/brown",
+        "baby_blue": "textures/entity/thunderdrum/baby_blue",
+        "baby_dark_blue": "textures/entity/thunderdrum/baby_dark_blue",
+        "baby_orange": "textures/entity/thunderdrum/baby_orange",
+        "baby_peach": "textures/entity/thunderdrum/baby_peach",
+        "baby_white": "textures/entity/thunderdrum/baby_white",
+        "baby_black": "textures/entity/thunderdrum/baby_black",
+        "baby_green": "textures/entity/thunderdrum/baby_green",
+        "baby_purple": "textures/entity/thunderdrum/baby_purple",
+        "baby_red": "textures/entity/thunderdrum/baby_red",
+        "baby_brown": "textures/entity/thunderdrum/baby_brown"
+      },
+      "geometry": {
+        "default": "geometry.thunderdrum",
+        "baby": "geometry.baby_thunderdrum"
+      },
+      "animations": {
+        "main_controller": "controller.animation.thunderdrum.main",
+        "attack_controller": "controller.animation.thunderdrum.attack",
+        "none": "animation.dragon.none",
+        "walk": "animation.thunderdrum.walk",
+        "idle": "animation.thunderdrum.idle",
+        "fly": "animation.thunderdrum.fly",
+        "swim": "animation.thunderdrum.swim",
+        "hover": "animation.thunderdrum.hover",
+        "sit": "animation.thunderdrum.sit",
+        "sleep": "animation.thunderdrum.sleep",
+        "roar": "animation.thunderdrum.roar",
+        "look_at_target": "animation.common.look_at_target",
+        "rotate": "animation.dragon.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "main_controller",
+          "attack_controller",
+          {
+            "rotate": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.1"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.thunderdrum"
+      ],
+      "spawn_egg": {
+        "base_color": "#233F91",
+        "overlay_color": "#BAB4FC"
+      }
+    }
+  }
+}

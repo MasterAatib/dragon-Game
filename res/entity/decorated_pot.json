@@ -1,0 +1,14 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:decorated_pot",
+      "textures": {
+        "tame_pottery_sherd": "textures/entity/pottery/tame_pottery_sherd",
+        "dragon_pottery_sherd": "textures/entity/pottery/dragon_pottery_sherd",
+        "bud_pottery_sherd": "textures/entity/pottery/bud_pottery_sherd",
+        "helm_pottery_sherd": "textures/entity/pottery/helm_pottery_sherd"
+      }
+    }
+  }
+}
