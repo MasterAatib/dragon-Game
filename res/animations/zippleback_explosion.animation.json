@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.zippleback_explosion.fly": {
+      "loop": true,
+      "animation_length": 4.5,
+      "bones": {
+        "gas2": {
+          "rotation": [
+            "query.anim_time*40",
+            "query.anim_time*-40",
+            "query.anim_time*40"
+          ]
+        },
+        "gas1": {
+          "rotation": [
+            "query.anim_time*-40",
+            "query.anim_time*40",
+            "query.anim_time*-40"
+          ]
+        },
+        "gas4": {
+          "rotation": [
+            "query.anim_time*40",
+            "query.anim_time*40",
+            "query.anim_time*-40"
+          ]
+        },
+        "gas3": {
+          "rotation": [
+            "query.anim_time*-40",
+            "query.anim_time*40",
+            "query.anim_time*40"
+          ]
+        }
+      }
+    }
+  }
+}

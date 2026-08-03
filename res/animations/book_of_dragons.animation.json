@@ -1,0 +1,177 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.book_of_dragons.third_person_closed": {
+      "loop": true,
+      "bones": {
+        "rightItem": {
+          "position": [
+            -6,
+            -9,
+            -1
+          ]
+        },
+        "leftItem": {
+          "position": [
+            6,
+            -9,
+            -1
+          ]
+        },
+        "Map": {
+          "rotation": [
+            0.66963,
+            14.98539,
+            2.58807
+          ],
+          "position": [
+            5.25,
+            9.25,
+            1.75
+          ]
+        }
+      }
+    },
+    "animation.book_of_dragons.first_person_closed": {
+      "loop": true,
+      "bones": {
+        "rightItem": {
+          "position": [
+            -6,
+            -9,
+            -1
+          ]
+        },
+        "leftItem": {
+          "position": [
+            6,
+            -9,
+            -1
+          ]
+        },
+        "Map": {
+          "rotation": [
+            69.25545,
+            24.18855,
+            93.07766
+          ],
+          "position": [
+            -2.25,
+            13,
+            -6.25
+          ]
+        }
+      }
+    },
+    "animation.book_of_dragons.third_person_open": {
+      "loop": true,
+      "bones": {
+        "rightArm": {
+          "rotation": [
+            95,
+            -45,
+            115
+          ],
+          "position": [
+            13.5,
+            -10,
+            12
+          ]
+        },
+        "rightItem": {
+          "position": [
+            -6,
+            -9,
+            -1
+          ]
+        },
+        "Map": {
+          "rotation": [
+            13.79348,
+            -8.5613,
+            281.87948
+          ],
+          "position": [
+            7.75,
+            9.25,
+            -6.75
+          ]
+        },
+        "Verso": {
+          "rotation": [
+            0,
+            0,
+            -117.5
+          ],
+          "position": [
+            1,
+            0.75,
+            0
+          ]
+        },
+        "spine": {
+          "position": [
+            0,
+            0.5,
+            0
+          ]
+        }
+      }
+    },
+    "animation.book_of_dragons.first_person_open": {
+      "loop": true,
+      "bones": {
+        "rightArm": {
+          "rotation": [
+            95,
+            -45,
+            115
+          ],
+          "position": [
+            13.5,
+            -10,
+            12
+          ]
+        },
+        "rightItem": {
+          "position": [
+            -6,
+            -9,
+            -1
+          ]
+        },
+        "Map": {
+          "rotation": [
+            41.48026,
+            -50.93807,
+            169.32127
+          ],
+          "position": [
+            -0.25,
+            14.75,
+            -17.25
+          ]
+        },
+        "Verso": {
+          "rotation": [
+            0,
+            0,
+            -117.5
+          ],
+          "position": [
+            1,
+            0.75,
+            0
+          ]
+        },
+        "spine": {
+          "position": [
+            0,
+            0.5,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

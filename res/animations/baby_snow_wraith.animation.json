@@ -1,0 +1,833 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.baby_snow_wraith.idle": {
+      "loop": true,
+      "animation_length": 0.8333,
+      "bones": {
+        "root": {
+          "position": [
+            0,
+            -0.5,
+            0
+          ]
+        },
+        "leg_right": {
+          "rotation": [
+            3.61644,
+            19.6835,
+            10.62758
+          ]
+        },
+        "foot_right": {
+          "rotation": [
+            0,
+            0,
+            -10
+          ]
+        },
+        "leg_left": {
+          "rotation": [
+            3.61644,
+            -19.6835,
+            -10.62758
+          ]
+        },
+        "foot_left": {
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        },
+        "torso": {
+          "rotation": [
+            -10,
+            0,
+            0
+          ],
+          "position": {
+            "0.0": [
+              0,
+              1,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "neck": {
+          "rotation": [
+            -17.5,
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": [
+            32.5,
+            0,
+            0
+          ]
+        },
+        "wing_right": {
+          "rotation": [
+            3.42643,
+            9.87388,
+            -68.22109
+          ]
+        },
+        "wing_right2": {
+          "rotation": [
+            0,
+            55,
+            0
+          ]
+        },
+        "wing_left": {
+          "rotation": [
+            3.42643,
+            -9.87388,
+            68.22109
+          ]
+        },
+        "wing_left2": {
+          "rotation": [
+            0,
+            -55,
+            0
+          ]
+        },
+        "tail2": {
+          "rotation": [
+            -30,
+            0,
+            0
+          ]
+        },
+        "tail3": {
+          "rotation": [
+            15,
+            0,
+            0
+          ]
+        },
+        "tail4": {
+          "rotation": [
+            10,
+            0,
+            0
+          ]
+        },
+        "tail5": {
+          "rotation": [
+            17.5,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.baby_snow_wraith.walk": {
+      "loop": true,
+      "animation_length": 0.8333,
+      "bones": {
+        "root": {
+          "position": [
+            0,
+            -0.5,
+            0
+          ]
+        },
+        "leg_right": {
+          "rotation": {
+            "0.0": [
+              28.89422,
+              13.40775,
+              17.94626
+            ],
+            "0.4167": [
+              -39.22072,
+              21.69349,
+              -5.15484
+            ],
+            "0.8333": [
+              28.89422,
+              13.40775,
+              17.94626
+            ]
+          }
+        },
+        "foot_right": {
+          "rotation": [
+            0,
+            0,
+            -10
+          ]
+        },
+        "leg_left": {
+          "rotation": {
+            "0.0": [
+              -39.22072,
+              -21.69349,
+              5.15484
+            ],
+            "0.4167": [
+              28.89422,
+              -13.40775,
+              -17.94626
+            ],
+            "0.8333": [
+              -39.22072,
+              -21.69349,
+              5.15484
+            ]
+          }
+        },
+        "foot_left": {
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        },
+        "torso": {
+          "rotation": [
+            -10,
+            0,
+            0
+          ],
+          "position": {
+            "0.0": [
+              0,
+              1,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "neck": {
+          "rotation": [
+            -17.5,
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": [
+            32.5,
+            0,
+            0
+          ]
+        },
+        "wing_right": {
+          "rotation": [
+            3.42643,
+            9.87388,
+            -68.22109
+          ]
+        },
+        "wing_right2": {
+          "rotation": [
+            0,
+            55,
+            0
+          ]
+        },
+        "wing_left": {
+          "rotation": [
+            3.42643,
+            -9.87388,
+            68.22109
+          ]
+        },
+        "wing_left2": {
+          "rotation": [
+            0,
+            -55,
+            0
+          ]
+        },
+        "tail2": {
+          "rotation": [
+            -30,
+            0,
+            0
+          ]
+        },
+        "tail3": {
+          "rotation": [
+            15,
+            0,
+            0
+          ]
+        },
+        "tail4": {
+          "rotation": [
+            10,
+            0,
+            0
+          ]
+        },
+        "tail5": {
+          "rotation": [
+            17.5,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.baby_snow_wraith.idle_special": {
+      "loop": true,
+      "animation_length": 1.25,
+      "bones": {
+        "root": {
+          "position": [
+            0,
+            -0.5,
+            0
+          ]
+        },
+        "leg_right": {
+          "rotation": [
+            3.61644,
+            19.6835,
+            10.62758
+          ]
+        },
+        "foot_right": {
+          "rotation": [
+            0,
+            0,
+            -10
+          ]
+        },
+        "leg_left": {
+          "rotation": [
+            3.61644,
+            -19.6835,
+            -10.62758
+          ]
+        },
+        "foot_left": {
+          "rotation": [
+            0,
+            0,
+            10
+          ]
+        },
+        "torso": {
+          "rotation": [
+            -10,
+            0,
+            0
+          ],
+          "position": {
+            "0.0": [
+              0,
+              1,
+              0
+            ],
+            "0.625": [
+              0,
+              0,
+              0
+            ],
+            "1.25": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "neck": {
+          "rotation": [
+            -17.5,
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": {
+            "0.0": [
+              34.13554,
+              -16.76559,
+              -11.06517
+            ],
+            "0.625": [
+              39.74814,
+              32.82818,
+              24.26813
+            ],
+            "1.25": [
+              34.38049,
+              -16.72244,
+              -11.15661
+            ]
+          }
+        },
+        "wing_right": {
+          "rotation": [
+            3.42643,
+            9.87388,
+            -68.22109
+          ]
+        },
+        "wing_right2": {
+          "rotation": [
+            0,
+            55,
+            0
+          ]
+        },
+        "wing_left": {
+          "rotation": [
+            3.42643,
+            -9.87388,
+            68.22109
+          ]
+        },
+        "wing_left2": {
+          "rotation": [
+            0,
+            -55,
+            0
+          ]
+        },
+        "tail2": {
+          "rotation": [
+            -30,
+            0,
+            0
+          ]
+        },
+        "tail3": {
+          "rotation": [
+            15,
+            0,
+            0
+          ]
+        },
+        "tail4": {
+          "rotation": [
+            10,
+            0,
+            0
+          ]
+        },
+        "tail5": {
+          "rotation": [
+            17.5,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.baby_snow_wraith.fly": {
+      "loop": true,
+      "animation_length": 0.8333,
+      "bones": {
+        "leg_right": {
+          "rotation": [
+            42.5,
+            0,
+            0
+          ]
+        },
+        "foot_right": {
+          "rotation": [
+            75,
+            0,
+            0
+          ]
+        },
+        "leg_left": {
+          "rotation": [
+            42.5,
+            0,
+            0
+          ]
+        },
+        "foot_left": {
+          "rotation": [
+            75,
+            0,
+            0
+          ]
+        },
+        "torso": {
+          "position": {
+            "0.0": [
+              0,
+              -1,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              0,
+              -1,
+              0
+            ]
+          }
+        },
+        "jaw": {
+          "rotation": {
+            "0.0": [
+              17.5,
+              0,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              17.5,
+              0,
+              0
+            ]
+          }
+        },
+        "wing_right": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              45
+            ],
+            "0.4167": [
+              0,
+              0,
+              -35
+            ],
+            "0.8333": [
+              0,
+              0,
+              45
+            ]
+          }
+        },
+        "wing_left": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              -45
+            ],
+            "0.4167": [
+              0,
+              0,
+              35
+            ],
+            "0.8333": [
+              0,
+              0,
+              -45
+            ]
+          }
+        }
+      }
+    },
+    "animation.baby_snow_wraith.hover": {
+      "loop": true,
+      "animation_length": 0.8333,
+      "bones": {
+        "leg_right": {
+          "rotation": [
+            -22.5,
+            0,
+            0
+          ]
+        },
+        "foot_right": {
+          "rotation": [
+            75,
+            0,
+            0
+          ]
+        },
+        "leg_left": {
+          "rotation": [
+            -22.5,
+            0,
+            0
+          ]
+        },
+        "foot_left": {
+          "rotation": [
+            75,
+            0,
+            0
+          ]
+        },
+        "torso": {
+          "rotation": [
+            -35,
+            0,
+            0
+          ],
+          "position": {
+            "0.0": [
+              0,
+              -1,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              0,
+              -1,
+              0
+            ]
+          }
+        },
+        "neck": {
+          "rotation": [
+            12.5,
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": [
+            37.5,
+            0,
+            0
+          ]
+        },
+        "jaw": {
+          "rotation": {
+            "0.0": [
+              17.5,
+              0,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              17.5,
+              0,
+              0
+            ]
+          }
+        },
+        "wing_right": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              45
+            ],
+            "0.4167": [
+              0,
+              0,
+              -35
+            ],
+            "0.8333": [
+              0,
+              0,
+              45
+            ]
+          }
+        },
+        "wing_left": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              -45
+            ],
+            "0.4167": [
+              0,
+              0,
+              35
+            ],
+            "0.8333": [
+              0,
+              0,
+              -45
+            ]
+          }
+        },
+        "tail2": {
+          "rotation": [
+            -40,
+            0,
+            0
+          ]
+        },
+        "tail3": {
+          "rotation": [
+            -30,
+            0,
+            0
+          ]
+        },
+        "tail5": {
+          "rotation": [
+            27.5,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "animation.baby_snow_wraith.sit": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            -2.5,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            -8,
+            0
+          ]
+        },
+        "leg_right": {
+          "rotation": [
+            -80,
+            25,
+            0
+          ]
+        },
+        "foot_right": {
+          "rotation": [
+            85,
+            0,
+            0
+          ]
+        },
+        "leg_left": {
+          "rotation": [
+            -80,
+            -25,
+            0
+          ]
+        },
+        "foot_left": {
+          "rotation": [
+            85,
+            0,
+            0
+          ]
+        },
+        "torso": {
+          "rotation": [
+            -20,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            2,
+            -1
+          ]
+        },
+        "neck": {
+          "rotation": [
+            -25,
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": [
+            57.5,
+            0,
+            0
+          ]
+        },
+        "wing_right": {
+          "rotation": [
+            -1.74388,
+            8.31087,
+            -23.66235
+          ]
+        },
+        "wing_right2": {
+          "rotation": [
+            0,
+            55,
+            0
+          ]
+        },
+        "wing_left": {
+          "rotation": [
+            -1.74388,
+            -8.31087,
+            23.66235
+          ]
+        },
+        "wing_left2": {
+          "rotation": [
+            0,
+            -55,
+            0
+          ]
+        },
+        "tail": {
+          "rotation": [
+            10,
+            0,
+            0
+          ]
+        },
+        "tail3": {
+          "rotation": [
+            17.5,
+            0,
+            0
+          ]
+        },
+        "tail4": {
+          "rotation": [
+            25,
+            0,
+            0
+          ]
+        },
+        "tail5": {
+          "rotation": [
+            -17.5,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

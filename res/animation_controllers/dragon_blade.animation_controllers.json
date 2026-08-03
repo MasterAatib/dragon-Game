@@ -1,0 +1,55 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.dragon_blade.ignite": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "ignite": "query.is_item_equipped"
+            }
+          ]
+        },
+        "ignite": {
+          "animations": [
+            "ignite"
+          ],
+          "transitions": [
+            {
+              "lit": "query.all_animations_finished"
+            }
+          ]
+        },
+        "lit": {}
+      }
+    },
+    "controller.animation.dragon_blade.retract": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "retract": "query.is_item_equipped"
+            }
+          ]
+        },
+        "retract": {
+          "animations": [
+            "retract"
+          ],
+          "transitions": [
+            {
+              "unlit": "query.all_animations_finished"
+            }
+          ]
+        },
+        "unlit": {
+          "animations": [
+            "unlit"
+          ]
+        }
+      }
+    }
+  }
+}

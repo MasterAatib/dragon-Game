@@ -1,0 +1,937 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.baby_screaming_death.idle": {
+      "loop": true,
+      "bones": {
+        "Peitoral1": {
+          "rotation": [
+            -20,
+            -12.5,
+            1e-05
+          ]
+        },
+        "Peitoral2": {
+          "rotation": [
+            -34.55418,
+            -11.73508,
+            -4.33609
+          ]
+        },
+        "rightWingArm": {
+          "rotation": [
+            22.57241,
+            54.4104,
+            "-40.8528-math.sin(query.anim_time*100-250)*2"
+          ]
+        },
+        "rightWingFArm": {
+          "rotation": [
+            0,
+            -57.5,
+            0
+          ]
+        },
+        "right3Finger": {
+          "rotation": [
+            0,
+            62.5,
+            0
+          ]
+        },
+        "leftWingArm": {
+          "rotation": [
+            22.57241,
+            -54.41035,
+            "40.8528-math.sin(query.anim_time*100-100)*2"
+          ]
+        },
+        "leftWingFArm": {
+          "rotation": [
+            0,
+            57.5,
+            0
+          ]
+        },
+        "left2Finger": {
+          "rotation": [
+            0,
+            -2.5,
+            0
+          ]
+        },
+        "left3Finger": {
+          "rotation": [
+            0,
+            -62.5,
+            0
+          ]
+        },
+        "Peitoral3": {
+          "rotation": [
+            -40.07988,
+            -0.59661,
+            0.18044
+          ]
+        },
+        "Cauda1": {
+          "rotation": [
+            41.11266,
+            -1.09778,
+            30.17208
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            40.06695,
+            -25.73828,
+            31.74297
+          ]
+        },
+        "Cauda3": {
+          "rotation": [
+            6.46635,
+            -7.64427,
+            "49.5675-math.sin(query.anim_time*100-100)*2"
+          ]
+        },
+        "Cauda4": {
+          "rotation": [
+            -10,
+            0,
+            "45-math.sin(query.anim_time*100-200)*2"
+          ]
+        },
+        "Cauda5": {
+          "rotation": [
+            3.39243,
+            1.91486,
+            "49.9731-math.sin(query.anim_time*100-400)*2"
+          ]
+        },
+        "Cauda6": {
+          "rotation": [
+            2.5,
+            0,
+            "42.5-math.sin(query.anim_time*100-500)*2"
+          ]
+        },
+        "Tail6": {
+          "rotation": [
+            -5,
+            0,
+            "70-math.sin(query.anim_time*100-100)*2"
+          ]
+        },
+        "head": {
+          "rotation": [
+            32.5,
+            0,
+            0
+          ]
+        },
+        "baby": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            20.5,
+            0
+          ]
+        },
+        "body": {
+          "position": [
+            0,
+            11.25,
+            0
+          ]
+        },
+        "baby_screaming_death": {
+          "position": [
+            0,
+            28.5,
+            -11.5
+          ]
+        }
+      }
+    },
+    "animation.baby_screaming_death.sit": {
+      "loop": true,
+      "bones": {
+        "baby": {
+          "rotation": [
+            -5e-05,
+            -42.5,
+            5e-05
+          ],
+          "position": [
+            0,
+            -2.5,
+            0
+          ]
+        },
+        "Peitoral1": {
+          "rotation": [
+            -20,
+            -12.5,
+            1e-05
+          ]
+        },
+        "rightWingArm": {
+          "rotation": [
+            73.99845,
+            45.99944,
+            "58.7465-math.sin(query.anim_time*100-250)*2"
+          ]
+        },
+        "rightWingFArm": {
+          "rotation": [
+            0,
+            -57.5,
+            0
+          ]
+        },
+        "right3Finger": {
+          "rotation": [
+            0,
+            62.5,
+            0
+          ]
+        },
+        "leftWingArm": {
+          "rotation": [
+            -8.98756,
+            2.77884,
+            "9.5894-math.sin(query.anim_time*100-100)*2"
+          ]
+        },
+        "leftWingFArm": {
+          "rotation": [
+            0,
+            50,
+            0
+          ]
+        },
+        "left3Finger": {
+          "rotation": [
+            0,
+            -2.5,
+            0
+          ]
+        },
+        "Peitoral3": {
+          "rotation": [
+            -22.57988,
+            -0.59661,
+            0.18044
+          ]
+        },
+        "Cauda1": {
+          "rotation": [
+            54.78113,
+            21.96423,
+            49.83259
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            40.06695,
+            -25.73828,
+            31.74297
+          ]
+        },
+        "Cauda3": {
+          "rotation": [
+            15.22579,
+            26.28734,
+            "35.5231-math.sin(query.anim_time*100-100)*2"
+          ]
+        },
+        "Cauda4": {
+          "rotation": [
+            30,
+            0,
+            "45-math.sin(query.anim_time*100-200)*2"
+          ]
+        },
+        "Cauda5": {
+          "rotation": [
+            18.95978,
+            -14.08977,
+            "89.7122-math.sin(query.anim_time*100-400)*2"
+          ]
+        },
+        "Cauda6": {
+          "rotation": [
+            35,
+            0,
+            "70-math.sin(query.anim_time*100-100)*2"
+          ]
+        },
+        "body": {
+          "rotation": [
+            17.5,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            -15,
+            0
+          ]
+        },
+        "peitoral": {
+          "rotation": [
+            28.38103,
+            44.79485,
+            17.66085
+          ]
+        },
+        "baby_screaming_death": {
+          "rotation": [
+            5,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            2,
+            0
+          ]
+        }
+      }
+    },
+    "animation.baby_screaming_death.flapping": {
+      "loop": true,
+      "animation_length": 0.875,
+      "bones": {
+        "baby": {
+          "position": [
+            0,
+            5.75,
+            0
+          ]
+        },
+        "Peitoral1": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-250)*5",
+            0,
+            0
+          ]
+        },
+        "Peitoral2": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-350)*10",
+            0,
+            0
+          ]
+        },
+        "rightWingArm": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400+250)*35",
+            0,
+            "15-math.sin(query.anim_time*400+300)*-55"
+          ]
+        },
+        "rightWingFArm": {
+          "rotation": [
+            0,
+            0,
+            "-10-math.sin(query.anim_time*400+250)*-45"
+          ]
+        },
+        "right3Finger": {
+          "rotation": [
+            0,
+            "25-math.sin(query.anim_time*400)*-35",
+            0
+          ]
+        },
+        "leftWingArm": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400+250)*35",
+            0,
+            "-15-math.sin(query.anim_time*400+300)*55"
+          ]
+        },
+        "leftWingFArm": {
+          "rotation": [
+            0,
+            0,
+            "10-math.sin(query.anim_time*400+250)*45"
+          ]
+        },
+        "left3Finger": {
+          "rotation": {
+            "0.0": [
+              0,
+              "-25-math.sin(query.anim_time*400)*35",
+              0
+            ],
+            "0.875": [
+              0,
+              "-25-math.sin(query.anim_time*400)*35",
+              0
+            ]
+          }
+        },
+        "Peitoral3": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-400)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda1": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-450)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-550)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda3": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-550)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda4": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-600)*20",
+            0,
+            0
+          ]
+        },
+        "Cauda5": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-650)*25",
+            0,
+            0
+          ]
+        },
+        "Cauda6": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-650)*25",
+            0,
+            0
+          ]
+        },
+        "Tail6": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-750)*25",
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": [
+            7.5,
+            0,
+            0
+          ]
+        },
+        "body": {
+          "position": [
+            0,
+            6.75,
+            0
+          ]
+        },
+        "baby_screaming_death": {
+          "position": [
+            0,
+            26.75,
+            -7.25
+          ]
+        }
+      }
+    },
+    "animation.baby_screaming_death.bite": {
+      "animation_length": 1,
+      "bones": {
+        "baby": {
+          "rotation": [
+            1e-05,
+            -7.5,
+            0
+          ],
+          "position": [
+            0,
+            "0-math.sin(query.anim_time*400-150)*10",
+            0
+          ]
+        },
+        "Peitoral1": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-250)*5",
+            0,
+            0
+          ]
+        },
+        "Peitoral2": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-350)*10",
+            0,
+            0
+          ]
+        },
+        "rightWingArm": {
+          "rotation": [
+            "-36.6649-math.sin(query.anim_time*400+250)*35",
+            0.95138,
+            "25.4973-math.sin(query.anim_time*400+300)*-55"
+          ]
+        },
+        "rightWingFArm": {
+          "rotation": [
+            0,
+            0,
+            "-10-math.sin(query.anim_time*400+250)*-45"
+          ]
+        },
+        "right3Finger": {
+          "rotation": [
+            0,
+            "35-math.sin(query.anim_time*400)*-35",
+            0
+          ]
+        },
+        "leftWingArm": {
+          "rotation": [
+            "-44.4878-math.sin(query.anim_time*400+250)*35",
+            2.45371,
+            "0.4609-math.sin(query.anim_time*400+300)*55"
+          ]
+        },
+        "leftWingFArm": {
+          "rotation": [
+            0,
+            0,
+            "10-math.sin(query.anim_time*400+250)*45"
+          ]
+        },
+        "left3Finger": {
+          "rotation": [
+            0,
+            "-35-math.sin(query.anim_time*400)*35",
+            0
+          ]
+        },
+        "Peitoral3": {
+          "rotation": [
+            "-37.7877-math.sin(query.anim_time*400-400)*15",
+            9.36954,
+            -3.51024
+          ]
+        },
+        "Cauda1": {
+          "rotation": [
+            "-20.0284-math.sin(query.anim_time*400-450)*15",
+            4.95712,
+            -0.65427
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            "29.9808-math.sin(query.anim_time*400-550)*15",
+            -0.95223,
+            2.31166
+          ]
+        },
+        "Cauda3": {
+          "rotation": [
+            "32.4764-math.sin(query.anim_time*400-550)*15",
+            1.24574,
+            -2.16769
+          ]
+        },
+        "Cauda4": {
+          "rotation": [
+            "27.4883-math.sin(query.anim_time*400-600)*20",
+            0.54858,
+            -2.43911
+          ]
+        },
+        "Cauda5": {
+          "rotation": [
+            "50-math.sin(query.anim_time*400-650)*25",
+            0,
+            0
+          ]
+        },
+        "Cauda6": {
+          "rotation": [
+            "-15-math.sin(query.anim_time*400-650)*25",
+            0,
+            0
+          ]
+        },
+        "Tail6": {
+          "rotation": [
+            "-20-math.sin(query.anim_time*400-750)*25",
+            0,
+            0
+          ]
+        },
+        "body": {
+          "position": [
+            0,
+            5.5,
+            0
+          ]
+        }
+      }
+    },
+    "animation.baby_screaming_death.idle_flapping": {
+      "loop": true,
+      "bones": {
+        "baby": {
+          "position": [
+            0,
+            "31.5-math.sin(query.anim_time*400-150)*5",
+            0
+          ]
+        },
+        "Peitoral1": {
+          "rotation": [
+            "-15-math.sin(query.anim_time*400-250)*5",
+            0,
+            0
+          ]
+        },
+        "Peitoral2": {
+          "rotation": [
+            "-25-math.sin(query.anim_time*400-350)*10",
+            0,
+            0
+          ]
+        },
+        "rightWingArm": {
+          "rotation": [
+            "7.5-math.sin(query.anim_time*400+250)*35",
+            0,
+            "15-math.sin(query.anim_time*400+300)*-55"
+          ]
+        },
+        "rightWingFArm": {
+          "rotation": [
+            0,
+            0,
+            "-10-math.sin(query.anim_time*400+250)*-45"
+          ]
+        },
+        "right3Finger": {
+          "rotation": [
+            0,
+            "35-math.sin(query.anim_time*400)*-35",
+            0
+          ]
+        },
+        "leftWingArm": {
+          "rotation": [
+            "7.5-math.sin(query.anim_time*400+250)*35",
+            0,
+            "-15-math.sin(query.anim_time*400+300)*55"
+          ]
+        },
+        "leftWingFArm": {
+          "rotation": [
+            0,
+            0,
+            "10-math.sin(query.anim_time*400+250)*45"
+          ]
+        },
+        "left3Finger": {
+          "rotation": [
+            0,
+            "-35-math.sin(query.anim_time*400)*35",
+            0
+          ]
+        },
+        "Peitoral3": {
+          "rotation": [
+            "-40-math.sin(query.anim_time*400-400)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda1": {
+          "rotation": [
+            "-10-math.sin(query.anim_time*400-450)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-550)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda3": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-550)*15",
+            0,
+            0
+          ]
+        },
+        "Cauda4": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-600)*20",
+            0,
+            0
+          ]
+        },
+        "Cauda5": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-650)*25",
+            0,
+            0
+          ]
+        },
+        "Cauda6": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-650)*25",
+            0,
+            0
+          ]
+        },
+        "Tail6": {
+          "rotation": [
+            "0-math.sin(query.anim_time*400-750)*25",
+            0,
+            0
+          ]
+        },
+        "head": {
+          "rotation": [
+            30,
+            0,
+            0
+          ]
+        },
+        "body": {
+          "position": [
+            0,
+            8,
+            0
+          ]
+        },
+        "baby_screaming_death": {
+          "position": [
+            0,
+            34.5,
+            -7.75
+          ]
+        }
+      }
+    },
+    "animation.baby_screaming_death.breath": {
+      "loop": true,
+      "bones": {
+        "head": {
+          "rotation": [
+            -7.5,
+            "0-math.sin(query.anim_time*300-200)*10",
+            "0-math.sin(query.anim_time*300-150)*7"
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            "32.5-math.sin(query.anim_time*150)*5",
+            0,
+            0
+          ],
+          "position": [
+            0,
+            -1,
+            1
+          ]
+        },
+        "jaw": {
+          "rotation": [
+            "32.5-math.sin(query.anim_time*150)*5",
+            0,
+            0
+          ],
+          "position": [
+            0,
+            2,
+            -1
+          ]
+        }
+      }
+    },
+    "animation.baby_screaming_death.walk": {
+      "loop": true,
+      "animation_length": 2,
+      "anim_time_update": "query.modified_distance_moved*0.03",
+      "bones": {
+        "Peitoral3": {
+          "rotation": [
+            -40.07988,
+            -0.5966,
+            "0.1804-math.sin(query.anim_time*180-250)*5"
+          ]
+        },
+        "Peitoral1": {
+          "rotation": [
+            -20,
+            "0-math.sin(query.anim_time*180-150)*7",
+            0
+          ]
+        },
+        "Peitoral2": {
+          "rotation": [
+            -35,
+            "0-math.sin(query.anim_time*180-250)*7",
+            0
+          ]
+        },
+        "rightWingArm": {
+          "rotation": [
+            "22.5724-math.sin(query.anim_time*180-100)*-7",
+            54.4104,
+            -40.8528
+          ]
+        },
+        "rightWingFArm": {
+          "rotation": [
+            0,
+            -57.5,
+            0
+          ]
+        },
+        "right3Finger": {
+          "rotation": [
+            0,
+            62.5,
+            0
+          ]
+        },
+        "leftWingArm": {
+          "rotation": [
+            "22.5724-math.sin(query.anim_time*180-100)*7",
+            -54.41035,
+            40.8528
+          ]
+        },
+        "leftWMem3": {
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        "leftWingFArm": {
+          "rotation": [
+            0,
+            57.5,
+            0
+          ]
+        },
+        "left2Finger": {
+          "rotation": [
+            0,
+            -2.5,
+            0
+          ]
+        },
+        "left3Finger": {
+          "rotation": [
+            0,
+            -62.5,
+            0
+          ]
+        },
+        "Cauda1": {
+          "rotation": [
+            37.5,
+            "0-math.sin(query.anim_time*180-300)*5",
+            "0-math.sin(query.anim_time*180-300)*5"
+          ]
+        },
+        "Cauda2": {
+          "rotation": [
+            47.5,
+            "0-math.sin(query.anim_time*180-350)*-25",
+            "0-math.sin(query.anim_time*180-350)*25"
+          ]
+        },
+        "Cauda3": {
+          "rotation": [
+            7,
+            "0-math.sin(query.anim_time*180)*-4",
+            "0-math.sin(query.anim_time*180-400)*25"
+          ]
+        },
+        "Cauda4": {
+          "rotation": [
+            "0-math.sin(query.anim_time*360+100)*-5",
+            0,
+            "0-math.sin(query.anim_time*180-500)*25"
+          ]
+        },
+        "Cauda5": {
+          "rotation": [
+            -2.5,
+            0,
+            "0-math.sin(query.anim_time*180-500)*25"
+          ]
+        },
+        "Cauda6": {
+          "rotation": [
+            2.5,
+            0,
+            "0-math.sin(query.anim_time*180-550)*55"
+          ]
+        },
+        "Tail6": {
+          "rotation": [
+            0,
+            0,
+            "-math.sin(query.anim_time*180-600)*55"
+          ]
+        },
+        "head": {
+          "rotation": [
+            45,
+            0,
+            0
+          ]
+        },
+        "moutnh": {
+          "rotation": [
+            -5,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            -1,
+            -0.25
+          ]
+        },
+        "baby_screaming_death": {
+          "position": [
+            0,
+            28.75,
+            -16.25
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.hobgobbler.main": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle_controller"
+          ],
+          "transitions": [
+            {
+              "sleeping": "query.property('httyd:sleeping')||query.property('httyd:sitting')"
+            },
+            {
+              "riding": "query.is_riding"
+            },
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "sleeping": {
+          "animations": [
+            "sleep"
+          ],
+          "transitions": [
+            {
+              "default": "!query.property('httyd:sleeping')&&!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "riding": {
+          "animations": [
+            "idle_controller"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_on_ground||!query.is_moving"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            }
+          ],
+          "blend_transition": 2
+        }
+      }
+    },
+    "controller.animation.hobgobbler.idle": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "idle_basic": "math.random_integer(0,10) != 1"
+            },
+            {
+              "idle_special": "math.random_integer(0,1) == 1"
+            }
+          ]
+        },
+        "idle_basic": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "default": "query.any_animation_finished"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "idle_special": {
+          "animations": [
+            "idle_special"
+          ],
+          "transitions": [
+            {
+              "default": "query.any_animation_finished"
+            }
+          ],
+          "blend_transition": 1
+        }
+      }
+    }
+  }
+}

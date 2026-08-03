@@ -1,0 +1,216 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.nightmare.main": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "caged": "query.is_riding"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed>=0&&query.ground_speed>0.5"
+            },
+            {
+              "gliding": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed<0&&query.ground_speed>0.5"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            }
+          ],
+          "blend_transition": 1.5,
+          "blend_via_shortest_path": true
+        },
+        "sitting": {
+          "animations": [
+            "sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 1.5,
+          "blend_via_shortest_path": true
+        },
+        "caged": {
+          "animations": [
+            "sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding"
+            }
+          ],
+          "blend_transition": 1.5,
+          "blend_via_shortest_path": true
+        },
+        "hovering": {
+          "animations": [
+            "hover"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1,
+          "blend_via_shortest_path": true
+        },
+        "gliding": {
+          "animations": [
+            "glide"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed>=0"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "gliding": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed<0&&query.ground_speed>0.5"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        }
+      }
+    },
+    "controller.animation.nightmare.baby": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "baby_idle"
+          ],
+          "transitions": [
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "caged": "query.is_riding"
+            },
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground"
+            }
+          ],
+          "blend_transition": 1.5,
+          "blend_via_shortest_path": true
+        },
+        "sitting": {
+          "animations": [
+            "baby_sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 1.5,
+          "blend_via_shortest_path": true
+        },
+        "caged": {
+          "animations": [
+            "baby_sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding"
+            }
+          ],
+          "blend_transition": 1.5,
+          "blend_via_shortest_path": true
+        },
+        "walking": {
+          "animations": [
+            "baby_walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "flying": {
+          "animations": [
+            "baby_fly"
+          ],
+          "transitions": [
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.snow_wraith.main": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle_controller"
+          ],
+          "transitions": [
+            {
+              "sitting": "query.is_riding||query.property('httyd:sitting')"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "sitting": {
+          "animations": [
+            "sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding&&!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "gliding": {
+          "animations": [
+            "glide"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed>=0"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "gliding": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed<0&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 2
+        }
+      }
+    },
+    "controller.animation.snow_wraith.baby": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "baby_idle"
+          ],
+          "transitions": [
+            {
+              "sitting": "query.is_riding||query.property('httyd:sitting')"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "sitting": {
+          "animations": [
+            "baby_sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding&&!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "gliding": {
+          "animations": [
+            "baby_glide"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed>=0"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "walking": {
+          "animations": [
+            "baby_walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "flying": {
+          "animations": [
+            "baby_fly"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "gliding": "query.property('httyd:flight_state')=='flying'&&query.vertical_speed<0&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 2
+        }
+      }
+    },
+    "controller.animation.snow_wraith.idle": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "idle_basic": "math.random_integer(0,10) != 1"
+            },
+            {
+              "idle_special": "math.random_integer(0,1) == 1"
+            }
+          ]
+        },
+        "idle_basic": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "default": "query.any_animation_finished"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "idle_special": {
+          "animations": [
+            "idle_special"
+          ],
+          "transitions": [
+            {
+              "default": "query.any_animation_finished"
+            }
+          ],
+          "blend_transition": 1
+        }
+      }
+    }
+  }
+}

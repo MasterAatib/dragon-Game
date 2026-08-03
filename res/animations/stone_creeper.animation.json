@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.stone_creeper.third_person": {
+      "loop": true,
+      "bones": {
+        "body": {
+          "rotation": [
+            64.33631,
+            -12.4378,
+            -51.32017
+          ],
+          "position": [
+            -1,
+            -18.25,
+            -2.25
+          ],
+          "scale": 0.35
+        }
+      }
+    },
+    "animation.stone_creeper.first_person": {
+      "loop": true,
+      "bones": {
+        "body": {
+          "rotation": [
+            7.33371,
+            -25.01418,
+            -148.21572
+          ],
+          "position": [
+            -2.75,
+            -20,
+            -3.25
+          ],
+          "scale": 0.35
+        }
+      }
+    }
+  }
+}

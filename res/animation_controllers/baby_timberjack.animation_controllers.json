@@ -1,0 +1,127 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.timberjack.baby": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "baby_idle"
+          ],
+          "transitions": [
+            {
+              "hovering": "!query.is_on_ground && !query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground && query.is_moving"
+            },
+            {
+              "attacking": "query.is_delayed_attacking"
+            }
+          ],
+          "blend_transition": true
+        },
+        "attacking": {
+          "animations": [
+            "baby_bite"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_delayed_attacking"
+            }
+          ],
+          "blend_transition": true
+        },
+        "hovering": {
+          "animations": [
+            "air_idle"
+          ],
+          "transitions": [
+            {
+              "flying": "!query.is_on_ground && query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground && !query.is_moving"
+            }
+          ],
+          "blend_transition": true,
+          "sound_effects": [
+            {
+              "effect": "fly"
+            }
+          ]
+        },
+        "walking": {
+          "animations": [
+            "baby_walk"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_on_ground || !query.is_moving"
+            }
+          ],
+          "blend_transition": true
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "hovering": "!query.is_on_ground && !query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground && query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "gliding": "query.vertical_speed < 0"
+            },
+            {
+              "default": "query.is_on_ground && !query.is_moving"
+            }
+          ],
+          "blend_transition": true,
+          "sound_effects": [
+            {
+              "effect": "fly"
+            }
+          ]
+        },
+        "gliding": {
+          "animations": [
+            "glide"
+          ],
+          "transitions": [
+            {
+              "hovering": "!query.is_on_ground && !query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "flying": "query.vertical_speed >= 0"
+            },
+            {
+              "default": "query.is_on_ground && !query.is_moving"
+            }
+          ],
+          "blend_transition": true,
+          "sound_effects": [
+            {
+              "effect": "fly"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

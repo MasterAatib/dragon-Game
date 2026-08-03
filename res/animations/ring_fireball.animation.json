@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ring_fireball.particle": {
+      "loop": true,
+      "animation_length": 0.05,
+      "particle_effects": {
+        "0.001": {
+          "effect": "httyd:ring_fire",
+          "locator": "locator1"
+        },
+        "0.002": {
+          "effect": "httyd:ring_fire",
+          "locator": "locator2"
+        },
+        "0.003": {
+          "effect": "httyd:ring_fire",
+          "locator": "locator3"
+        },
+        "0.004": {
+          "effect": "httyd:ring_fire",
+          "locator": "locator4"
+        },
+        "0.005": {
+          "effect": "httyd:ring_fire",
+          "locator": "locator5"
+        }
+      }
+    }
+  }
+}

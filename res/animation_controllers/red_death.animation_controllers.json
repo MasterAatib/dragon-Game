@@ -1,0 +1,118 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.red_death.main": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "walk": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "fly": "!query.is_on_ground&&query.ground_speed>0.1"
+            },
+            {
+              "hover": "!query.is_on_ground&&!query.ground_speed>0.1"
+            },
+            {
+              "sleeping": "query.property('httyd:is_sleeping')"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "sleeping": {
+          "animations": [
+            "sleep"
+          ],
+          "transitions": [
+            {
+              "idle": "!query.property('httyd:is_sleeping')"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "walk": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "idle": "!query.is_moving"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "fly": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "idle": "query.is_on_ground"
+            },
+            {
+              "hover": "!query.ground_speed>0.1"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "hover": {
+          "animations": [
+            "hover"
+          ],
+          "transitions": [
+            {
+              "idle": "query.is_on_ground"
+            },
+            {
+              "fly": "query.ground_speed>0.1"
+            }
+          ],
+          "blend_transition": 1
+        }
+      }
+    },
+    "controller.animation.red_death.attack": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "bite": "query.is_delayed_attacking"
+            },
+            {
+              "breath": "query.is_charging"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "bite": {
+          "animations": [
+            "bite"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_delayed_attacking"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "breath": {
+          "animations": [
+            "breath"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_charging"
+            }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

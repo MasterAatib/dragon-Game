@@ -1,0 +1,83 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.nadder.baby": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "baby_idle"
+          ],
+          "transitions": [
+            {
+              "baby_sitting": "query.is_riding||query.property('httyd:sitting')"
+            },
+            {
+              "baby_walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "baby_flying": "!query.is_on_ground&&query.is_moving"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "baby_sitting": {
+          "animations": [
+            "baby_sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding&&!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "baby_hovering": {
+          "animations": [
+            "baby_hover"
+          ],
+          "transitions": [
+            {
+              "baby_walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            },
+            {
+              "baby_flying": "query.ground_speed>=0"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "baby_walking": {
+          "animations": [
+            "baby_walk"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_on_ground||!query.is_moving"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "baby_flying": {
+          "animations": [
+            "baby_fly"
+          ],
+          "transitions": [
+            {
+              "baby_walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            },
+            {
+              "baby_hovering": "query.ground_speed<0"
+            }
+          ],
+          "blend_transition": 2
+        }
+      }
+    }
+  }
+}

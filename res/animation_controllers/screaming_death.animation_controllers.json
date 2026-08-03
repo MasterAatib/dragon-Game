@@ -1,0 +1,218 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.screaming_death.main": {
+      "initial_state": "initial",
+      "states": {
+        "spawning": {
+          "animations": [
+            "spawn"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:emerging')==false"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "initial": {
+          "transitions": [
+            {
+              "spawning": "query.property('httyd:emerging')==true"
+            },
+            {
+              "default": "query.property('httyd:emerging')==false"
+            }
+          ]
+        },
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "sitting": {
+          "animations": [
+            "sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "hovering": {
+          "animations": [
+            "air_idle"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving&&!query.is_riding"
+            },
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.is_moving"
+            }
+          ],
+          "blend_transition": 3
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving&&!query.is_riding"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.is_moving"
+            }
+          ],
+          "blend_transition": 3
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving&&!query.is_riding"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            }
+          ],
+          "blend_transition": 3
+        }
+      }
+    },
+    "controller.animation.screaming_death.baby": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "baby_idle"
+          ],
+          "transitions": [
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "sitting": {
+          "animations": [
+            "baby_sit"
+          ],
+          "transitions": [
+            {
+              "default": "!query.property('httyd:sitting')"
+            }
+          ],
+          "blend_transition": 0.5
+        },
+        "hovering": {
+          "animations": [
+            "baby_air_idle"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving&&!query.is_riding"
+            },
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.is_moving"
+            }
+          ],
+          "blend_transition": 3
+        },
+        "walking": {
+          "animations": [
+            "baby_walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving&&!query.is_riding"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.is_moving"
+            }
+          ],
+          "blend_transition": 3
+        },
+        "flying": {
+          "animations": [
+            "baby_fly"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving&&!query.is_riding"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "sitting": "query.property('httyd:sitting')"
+            },
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            }
+          ],
+          "blend_transition": 3
+        }
+      }
+    }
+  }
+}

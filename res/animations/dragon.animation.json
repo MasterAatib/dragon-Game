@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.dragon.rotate": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "rotation": [
+            "((-query.vertical_speed)/(query.ground_speed))*60",
+            0,
+            "query.yaw_speed*-0.25"
+          ]
+        }
+      }
+    },
+    "animation.dragon.none": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "scale": 1
+        }
+      }
+    }
+  }
+}

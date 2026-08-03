@@ -1,0 +1,102 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.buffalord.main": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "sleeping": "query.is_riding || query.is_sitting"
+            },
+            {
+              "hovering": "!query.is_on_ground && !query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground && query.is_moving"
+            },
+            {
+              "grazing": "query.is_grazing"
+            }
+          ],
+          "blend_transition": true
+        },
+        "sleeping": {
+          "animations": [
+            "sleep"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_riding"
+            }
+          ],
+          "blend_transition": 3
+        },
+        "hovering": {
+          "animations": [
+            "air_idle"
+          ],
+          "transitions": [
+            {
+              "flying": "!query.is_on_ground && query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground && !query.is_moving"
+            }
+          ],
+          "blend_transition": true
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "!query.is_on_ground || !query.is_moving"
+            },
+            {
+              "grazing": "query.is_grazing"
+            }
+          ],
+          "blend_transition": true
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "hovering": "!query.is_on_ground && !query.is_moving"
+            },
+            {
+              "walking": "query.is_on_ground && query.is_moving"
+            },
+            {
+              "default": "query.is_on_ground && !query.is_moving"
+            }
+          ],
+          "blend_transition": true
+        },
+        "grazing": {
+          "animations": [
+            "grazing"
+          ],
+          "transitions": [
+            {
+              "default": "query.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

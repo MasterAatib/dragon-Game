@@ -1,0 +1,139 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.boneknapper.main": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            },
+            {
+              "flying": "query.property('httyd:flight_state')=='flying'&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            }
+          ],
+          "blend_transition": 2
+        },
+        "hovering": {
+          "animations": [
+            "hover"
+          ],
+          "transitions": [
+            {
+              "walking": "query.property('httyd:flight_state')=='on_ground'&&query.is_moving"
+            },
+            {
+              "hovering": "query.property('httyd:flight_state')=='flying'&&query.ground_speed<0.5"
+            },
+            {
+              "default": "query.property('httyd:flight_state')=='on_ground'&&!query.is_moving"
+            }
+          ],
+          "blend_transition": 2
+        }
+      }
+    },
+    "controller.animation.boneknapper.boss": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "walking": {
+          "animations": [
+            "walk"
+          ],
+          "transitions": [
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            },
+            {
+              "flying": "!query.is_on_ground&&query.ground_speed>0.5"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "transitions": [
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "hovering": "!query.is_on_ground&&query.ground_speed<0.5"
+            },
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            }
+          ],
+          "blend_transition": 2
+        },
+        "hovering": {
+          "animations": [
+            "hover"
+          ],
+          "transitions": [
+            {
+              "walking": "query.is_on_ground&&query.is_moving"
+            },
+            {
+              "hovering": "!query.is_on_ground&&query.ground_speed<0.5"
+            },
+            {
+              "default": "query.is_on_ground&&!query.is_moving"
+            }
+          ],
+          "blend_transition": 2
+        }
+      }
+    }
+  }
+}

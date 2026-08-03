@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.dragon_cage": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "closed"
+          ],
+          "transitions": [
+            {
+              "open": "query.property('httyd:open_animation_finished')==true"
+            }
+          ]
+        },
+        "open": {
+          "animations": [
+            "open"
+          ]
+        }
+      }
+    }
+  }
+}
