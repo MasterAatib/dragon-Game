@@ -1,0 +1,306 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.nightmare_leggings",
+        "texture_width": 48,
+        "texture_height": 48,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [
+          0,
+          1.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ]
+        },
+        {
+          "name": "belt",
+          "parent": "body",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "binding": "'belt'",
+          "cubes": [
+            {
+              "origin": [
+                -4.5,
+                11.5,
+                -2.5
+              ],
+              "size": [
+                9,
+                13,
+                5
+              ],
+              "inflate": 0.01,
+              "uv": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leftLeg",
+          "parent": "root",
+          "pivot": [
+            1.9,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "leggings_left",
+          "parent": "leftLeg",
+          "pivot": [
+            -1.9,
+            12,
+            0
+          ],
+          "binding": "'leftleg'",
+          "cubes": [
+            {
+              "origin": [
+                -0.6,
+                -0.5,
+                -2.5
+              ],
+              "size": [
+                5,
+                13,
+                5
+              ],
+              "uv": [
+                20,
+                18
+              ]
+            },
+            {
+              "origin": [
+                2.4,
+                10.5,
+                -0.5
+              ],
+              "size": [
+                3,
+                3,
+                0
+              ],
+              "pivot": [
+                3.9,
+                12,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -44
+              ],
+              "uv": [
+                28,
+                10
+              ]
+            },
+            {
+              "origin": [
+                2.4,
+                6.5,
+                -0.5
+              ],
+              "size": [
+                3,
+                3,
+                0
+              ],
+              "pivot": [
+                3.9,
+                8,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -44
+              ],
+              "uv": [
+                28,
+                13
+              ]
+            },
+            {
+              "origin": [
+                0.5,
+                4,
+                -3.5
+              ],
+              "size": [
+                3,
+                3,
+                2
+              ],
+              "pivot": [
+                2,
+                5,
+                -2
+              ],
+              "rotation": [
+                7.5,
+                0,
+                0
+              ],
+              "uv": [
+                28,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightLeg",
+          "parent": "root",
+          "pivot": [
+            -1.9,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "leggings_right",
+          "parent": "rightLeg",
+          "pivot": [
+            -1.9,
+            12,
+            0
+          ],
+          "binding": "'rightleg'",
+          "cubes": [
+            {
+              "origin": [
+                -4.4,
+                -0.5,
+                -2.5
+              ],
+              "size": [
+                5,
+                13,
+                5
+              ],
+              "uv": [
+                0,
+                18
+              ]
+            },
+            {
+              "origin": [
+                -5.4,
+                10.5,
+                -0.5
+              ],
+              "size": [
+                3,
+                3,
+                0
+              ],
+              "pivot": [
+                -3.9,
+                12,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                44
+              ],
+              "uv": [
+                34,
+                13
+              ]
+            },
+            {
+              "origin": [
+                -5.4,
+                6.5,
+                -0.5
+              ],
+              "size": [
+                3,
+                3,
+                0
+              ],
+              "pivot": [
+                -3.9,
+                8,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                44
+              ],
+              "uv": [
+                34,
+                10
+              ]
+            },
+            {
+              "origin": [
+                -3.5,
+                4,
+                -3.5
+              ],
+              "size": [
+                3,
+                3,
+                2
+              ],
+              "pivot": [
+                -2,
+                5,
+                -2
+              ],
+              "rotation": [
+                7.5,
+                0,
+                0
+              ],
+              "uv": [
+                28,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

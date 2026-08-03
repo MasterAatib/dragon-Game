@@ -1,0 +1,143 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.gronckle_iron_chestplate",
+        "texture_width": 48,
+        "texture_height": 48,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [
+          0,
+          1.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                12,
+                -2
+              ],
+              "size": [
+                8,
+                12,
+                4
+              ],
+              "inflate": 1.01,
+              "uv": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightArm",
+          "parent": "body",
+          "pivot": [
+            -5,
+            22,
+            0
+          ]
+        },
+        {
+          "name": "rightItem",
+          "parent": "rightArm",
+          "pivot": [
+            -6,
+            15,
+            1
+          ]
+        },
+        {
+          "name": "arm_plate_right",
+          "parent": "rightArm",
+          "pivot": [
+            -5,
+            12,
+            0
+          ],
+          "binding": "'rightarm'",
+          "cubes": [
+            {
+              "origin": [
+                -7.7,
+                12,
+                -2
+              ],
+              "size": [
+                3,
+                12,
+                4
+              ],
+              "inflate": 1,
+              "uv": [
+                24,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leftArm",
+          "parent": "body",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "mirror": true
+        },
+        {
+          "name": "arm_plate_left",
+          "parent": "leftArm",
+          "pivot": [
+            5,
+            12,
+            0
+          ],
+          "binding": "'leftarm'",
+          "cubes": [
+            {
+              "origin": [
+                4.7,
+                12,
+                -2
+              ],
+              "size": [
+                3,
+                12,
+                4
+              ],
+              "inflate": 1,
+              "uv": [
+                0,
+                16
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

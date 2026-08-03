@@ -1,0 +1,198 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.book_of_dragons_page",
+        "texture_width": 220,
+        "texture_height": 636,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [
+          0,
+          1.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "Map",
+          "pivot": [
+            -6.33333,
+            11.91666,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            -90
+          ],
+          "binding": "q.item_slot_to_bone_name(context.item_slot)",
+          "cubes": [
+            {
+              "origin": [
+                -11.05833,
+                11.58333,
+                -4.975
+              ],
+              "size": [
+                6.95,
+                0.5,
+                9.95
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    319
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    319
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    319
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    0,
+                    319
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    220,
+                    319
+                  ],
+                  "uv_size": [
+                    -220,
+                    0
+                  ],
+                  "uv_rotation": 180
+                },
+                "down": {
+                  "uv": [
+                    220,
+                    319.8373
+                  ],
+                  "uv_size": [
+                    -220,
+                    -319.8373
+                  ],
+                  "uv_rotation": 180
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Verso",
+          "parent": "Map",
+          "pivot": [
+            -4.33333,
+            10.83333,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -11.05833,
+                11.08333,
+                -4.975
+              ],
+              "size": [
+                6.95,
+                0.5,
+                9.95
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    0,
+                    0
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    220,
+                    636
+                  ],
+                  "uv_size": [
+                    -220,
+                    -318.96429
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    0,
+                    290.5
+                  ],
+                  "uv_size": [
+                    -135.75,
+                    0
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
