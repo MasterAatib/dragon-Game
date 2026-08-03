@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.timberjack": {
+      "part_visibility": [
+        {
+          "equipement": "query.property('httyd:has_saddle')"
+        },
+        {
+          "equipement2": "query.property('httyd:has_saddle')"
+        },
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        }
+      ],
+      "geometry": "Array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.base[query.is_baby]"
+      ],
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.baby"
+          ]
+        },
+        "textures": {
+          "Array.base": [
+            "Texture.default",
+            "Texture.baby"
+          ]
+        }
+      }
+    }
+  }
+}

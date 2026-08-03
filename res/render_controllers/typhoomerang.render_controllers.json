@@ -1,0 +1,51 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.typhoomerang": {
+      "part_visibility": [
+        {
+          "equipement": "query.property('httyd:has_saddle')"
+        },
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "horn0": "!query.property('httyd:horns')==0"
+        },
+        {
+          "horn1": "!query.property('httyd:horns')==1"
+        },
+        {
+          "horn2": "!query.property('httyd:horns')==2"
+        },
+        {
+          "horn3": "!query.property('httyd:horns')==3"
+        },
+        {
+          "horn4": "!query.property('httyd:horns')==4"
+        }
+      ],
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.default",
+            "Texture.cyan",
+            "Texture.green",
+            "Texture.yellow",
+            "Texture.purple",
+            "Texture.black"
+          ]
+        }
+      },
+      "textures": [
+        "array.base[query.variant]"
+      ]
+    }
+  }
+}

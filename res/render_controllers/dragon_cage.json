@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.dragon_cage": {
+      "geometry": "array.geo[query.property('httyd:cage_type')=='square']",
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.square"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "texture.default"
+      ]
+    }
+  }
+}

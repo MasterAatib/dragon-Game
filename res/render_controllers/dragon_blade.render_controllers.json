@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.dragon_blade": {
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "array.texture_frames": [
+            "Texture.default",
+            "Texture.frame_1",
+            "Texture.frame_2",
+            "Texture.frame_3",
+            "Texture.frame_4",
+            "Texture.frame_5",
+            "Texture.frame_6",
+            "Texture.frame_7",
+            "Texture.frame_8"
+          ]
+        }
+      },
+      "textures": [
+        "temp.life_time=query.life_time*7;return array.texture_frames[temp.life_time];"
+      ]
+    }
+  }
+}

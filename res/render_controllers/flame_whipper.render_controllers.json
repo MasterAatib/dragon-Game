@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.flame_whipper": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "equipement": "query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.base[query.variant]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.default",
+            "Texture.tiger",
+            "Texture.red",
+            "Texture.orange",
+            "Texture.yellow"
+          ]
+        }
+      }
+    }
+  }
+}

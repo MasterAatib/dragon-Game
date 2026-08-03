@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.snow_wraith": {
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.baby"
+          ]
+        },
+        "textures": {
+          "Array.texture": [
+            "Texture.default",
+            "Texture.baby"
+          ]
+        }
+      },
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "equipement": "query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "Array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "Array.texture[query.is_baby]"
+      ]
+    }
+  }
+}

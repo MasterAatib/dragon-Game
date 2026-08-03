@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.screaming_death": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "equipement": "query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "array.base[query.variant]"
+      ],
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.baby"
+          ]
+        },
+        "textures": {
+          "Array.base": [
+            "Texture.baby",
+            "Texture.default"
+          ]
+        }
+      }
+    }
+  }
+}

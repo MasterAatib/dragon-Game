@@ -1,0 +1,107 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.night_fury": {
+      "arrays": {
+        "textures": {
+          "Array.adult": [
+            "texture.default",
+            "texture.red_eyes",
+            "texture.orange_eyes",
+            "texture.purple_eyes",
+            "texture.blue_eyes",
+            "texture.heterochromia_one",
+            "texture.heterochromia_two",
+            "texture.albino",
+            "texture.ocean",
+            "texture.skeleton",
+            "texture.vampire"
+          ],
+          "Array.baby": [
+            "texture.baby_green_eyes",
+            "texture.baby_red_eyes",
+            "texture.baby_orange_eyes",
+            "texture.baby_purple_eyes",
+            "texture.baby_blue_eyes",
+            "texture.baby_heterochromia_one",
+            "texture.baby_heterochromia_two",
+            "texture.baby_albino",
+            "texture.baby_ocean",
+            "texture.baby_skeleton",
+            "texture.baby_vampire"
+          ]
+        },
+        "geometries": {
+          "Array.geo": [
+            "geometry.default",
+            "geometry.baby"
+          ]
+        }
+      },
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        }
+      ],
+      "geometry": "Array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "query.is_baby ? Array.baby[query.variant] : Array.adult[query.variant]"
+      ]
+    },
+    "controller.render.night_fury_saddle": {
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "texture.saddle"
+      ]
+    },
+    "controller.render.night_fury_tailfin": {
+      "arrays": {
+        "textures": {
+          "Array.tailfins": [
+            "texture.none",
+            "texture.white",
+            "texture.light_gray",
+            "texture.gray",
+            "texture.black",
+            "texture.brown",
+            "texture.red",
+            "texture.orange",
+            "texture.yellow",
+            "texture.lime",
+            "texture.green",
+            "texture.cyan",
+            "texture.light_blue",
+            "texture.blue",
+            "texture.purple",
+            "texture.magenta",
+            "texture.pink"
+          ]
+        }
+      },
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        }
+      ],
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "Array.tailfins[q.property('httyd:tailfin')]"
+      ]
+    }
+  }
+}

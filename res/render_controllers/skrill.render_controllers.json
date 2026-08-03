@@ -1,0 +1,48 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.skrill": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        }
+      ],
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.base[query.variant]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.default",
+            "Texture.gray",
+            "Texture.green",
+            "Texture.magenta",
+            "Texture.orange",
+            "Texture.pink",
+            "Texture.purple",
+            "Texture.red",
+            "Texture.blue",
+            "Texture.skeleton"
+          ]
+        }
+      }
+    },
+    "controller.render.skrill_saddle": {
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "texture.saddle"
+      ]
+    }
+  }
+}

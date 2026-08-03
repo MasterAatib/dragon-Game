@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.dragon_eye_projection": {
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.textures": [
+            "texture.default",
+            "texture.sentinel",
+            "texture.boneknapper",
+            "texture.red_death",
+            "texture.bewilderbeast",
+            "texture.death_song"
+          ]
+        }
+      },
+      "textures": [
+        "query.property('httyd:lens') == 'sentinel' ? texture.sentinel : query.property('httyd:lens') == 'boneknapper' ? texture.boneknapper : query.property('httyd:lens') == 'red_death' ? texture.red_death : query.property('httyd:lens') == 'bewilderbeast' ? texture.bewilderbeast : query.property('httyd:lens') == 'screaming_death' ? texture.screaming_death : query.property('httyd:lens') == 'death_song' ? texture.death_song : texture.default"
+      ]
+    }
+  }
+}

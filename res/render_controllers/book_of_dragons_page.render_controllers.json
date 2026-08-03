@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.book_of_dragons_page": {
+      "geometry": "geometry.page",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "Texture.page"
+      ]
+    }
+  }
+}

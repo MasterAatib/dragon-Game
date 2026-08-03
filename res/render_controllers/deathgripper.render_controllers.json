@@ -1,0 +1,61 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.deathgripper": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "saddle": "query.property('httyd:has_saddle')"
+        },
+        {
+          "spike": "!query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "query.is_baby ? Array.baby[query.variant] : Array.adult[query.variant]"
+      ],
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.baby"
+          ]
+        },
+        "textures": {
+          "Array.adult": [
+            "Texture.default",
+            "Texture.blue",
+            "Texture.green",
+            "Texture.orange",
+            "Texture.purple",
+            "Texture.blue_morpho",
+            "Texture.monarch",
+            "Texture.hornet",
+            "Texture.hollow",
+            "Texture.demon"
+          ],
+          "Array.baby": [
+            "Texture.default",
+            "Texture.blue",
+            "Texture.green",
+            "Texture.orange",
+            "Texture.purple",
+            "Texture.blue_morpho",
+            "Texture.monarch",
+            "Texture.hornet",
+            "Texture.hollow",
+            "Texture.demon"
+          ]
+        }
+      }
+    }
+  }
+}

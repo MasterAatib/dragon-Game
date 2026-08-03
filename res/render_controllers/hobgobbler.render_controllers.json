@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.hobgobbler": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.base[query.variant]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.default",
+            "Texture.blue",
+            "Texture.green",
+            "Texture.gray",
+            "Texture.white",
+            "Texture.orange",
+            "Texture.yellow",
+            "Texture.dark_blue",
+            "Texture.skeleton"
+          ]
+        }
+      }
+    }
+  }
+}

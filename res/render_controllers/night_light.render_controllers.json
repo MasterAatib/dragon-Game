@@ -1,0 +1,58 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.night_light": {
+      "arrays": {
+        "textures": {
+          "Array.adult": [
+            "texture.pouncer",
+            "texture.ruffrunner",
+            "texture.dart",
+            "texture.thunder",
+            "texture.black_ears",
+            "texture.black_chest"
+          ],
+          "Array.baby": [
+            "texture.baby_pouncer",
+            "texture.baby_ruffrunner",
+            "texture.baby_dart",
+            "texture.baby_thunder",
+            "texture.baby_black_ears",
+            "texture.baby_black_chest"
+          ]
+        },
+        "geometries": {
+          "Array.geo": [
+            "geometry.default",
+            "geometry.baby"
+          ]
+        }
+      },
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        }
+      ],
+      "geometry": "Array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "query.is_baby ? Array.baby[query.variant] : Array.adult[query.variant]"
+      ]
+    },
+    "controller.render.night_light_saddle": {
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "texture.saddle"
+      ]
+    }
+  }
+}

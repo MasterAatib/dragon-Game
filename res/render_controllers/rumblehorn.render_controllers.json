@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.rumblehorn": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "Equipement": "query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.base[query.variant]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.default",
+            "Texture.blue"
+          ]
+        }
+      }
+    }
+  }
+}

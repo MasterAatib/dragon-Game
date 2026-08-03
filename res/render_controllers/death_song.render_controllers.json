@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.death_song": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "equipement": "query.property('httyd:has_saddle')"
+        },
+        {
+          "spikes": "!query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "Array.variant[query.variant]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variant": [
+            "Texture.default",
+            "Texture.light",
+            "Texture.dark"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.speed_stinger": {
+      "geometry": "array.geo[query.is_baby]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.baby"
+          ]
+        },
+        "textures": {
+          "Array.adult": [
+            "texture.default",
+            "texture.alpha",
+            "texture.yellow",
+            "texture.kaiju",
+            "texture.white"
+          ],
+          "Array.baby": [
+            "texture.baby_default",
+            "texture.baby_alpha",
+            "texture.baby_yellow",
+            "texture.baby_kaiju",
+            "texture.baby_white"
+          ]
+        }
+      },
+      "textures": [
+        "query.is_baby ? Array.baby[query.variant] : Array.adult[query.variant]"
+      ]
+    }
+  }
+}

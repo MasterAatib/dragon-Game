@@ -1,0 +1,62 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.nightmare": {
+      "part_visibility": [
+        {
+          "saddleBags": "query.property('httyd:has_saddle_bag')"
+        },
+        {
+          "saddle": "query.property('httyd:has_saddle')"
+        },
+        {
+          "spikes": "!query.property('httyd:has_saddle')"
+        }
+      ],
+      "geometry": "query.is_baby ? Geometry.baby : query.variant == 7 ? Geometry.pale : Geometry.default",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "query.is_baby ? Array.baby[query.variant] : Array.adult[query.variant]"
+      ],
+      "arrays": {
+        "geometries": {
+          "Array.geo": [
+            "Geometry.default",
+            "Geometry.baby",
+            "Geometry.pale"
+          ]
+        },
+        "textures": {
+          "Array.adult": [
+            "Texture.default",
+            "Texture.blue",
+            "Texture.green",
+            "Texture.purple",
+            "Texture.pink",
+            "Texture.yellow",
+            "Texture.lime",
+            "Texture.pale",
+            "Texture.black",
+            "Texture.light_pink"
+          ],
+          "Array.baby": [
+            "Texture.baby_red",
+            "Texture.baby_blue",
+            "Texture.baby_green",
+            "Texture.baby_purple",
+            "Texture.baby_pink",
+            "Texture.baby_yellow",
+            "Texture.baby_lime",
+            "Texture.baby_pale",
+            "Texture.baby_black",
+            "Texture.baby_light_pink"
+          ]
+        }
+      }
+    }
+  }
+}
