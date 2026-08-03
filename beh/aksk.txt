@@ -1,0 +1,18 @@
+Dragão Base (Nadder...): 70 (Beh e Reh)
+- Player voar nele
+- Variantes
+- Montar
+- Domar
+- Spawnar
+- Sentar
+- Player Soltar Fogo 
+Dragão Base (Terror Terrível...): 30 (Beh e Reh)
+- Ombro
+- Voar Sozin
+- Spawnar
+- Domar
+- Sentar
+
+Dragão (Nadder...) por semana eu faço por 35 (Por dragão)
+
+Dragão (Terror Terrível...) por semana eu faço por 10 (Por dragão)

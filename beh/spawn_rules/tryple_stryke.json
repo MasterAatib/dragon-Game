@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "s3xta:tryple_stryke",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 5,
+          "max": 18,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": {
+          "default": 15
+        },
+        "minecraft:herd": {
+          "min_size": 0,
+          "max_size": 2
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag", "operator": "==", "value": "mesa"
+        }
+      }
+    ]
+  }
+}

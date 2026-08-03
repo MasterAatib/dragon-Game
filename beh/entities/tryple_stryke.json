@@ -1,0 +1,973 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "s3xta:tryple_stryke",
+      "is_summonable": true,
+      "is_spawnable": true,
+      "properties": {
+        "s3xta:flying": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        },
+        "s3xta:variant": {
+          "type": "int",
+          "client_sync": true,
+          "range": [0, 5],
+          "default": 0
+        }
+      },
+      "animations": {
+        "all": "controller.animation.dragon_fly",
+        "timer.30_0": "animation.timer.30_0",
+        "timer.15_0": "animation.timer.15_0"
+      },
+      "scripts": {
+        "animate": [
+          "all"
+        ]
+      }
+    },
+    "component_groups": {
+      "s3xta:wild_baby": {
+        "minecraft:is_baby": {},
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player?math.random(1, 4):0"
+        },
+        "minecraft:health": {
+          "value": 45,
+          "max": 45
+        },
+        "minecraft:scale": {
+          "value": 0.2
+        }
+      },
+      "s3xta:wild_adult": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player?math.random(2,8):0"
+        },
+        "minecraft:health": {
+          "value": 90,
+          "max": 90
+        },
+        "minecraft:scale": {
+          "value": 1.2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 7,
+          "reselect_targets": true,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "is_sneaking",
+                    "subject": "other",
+                    "value": false
+                  }
+                ]
+              },
+              "max_dist": 6
+            },
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "player"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "tryple_stryke"
+                  }
+                ]
+              },
+              "max_dist": 32
+            }
+          ]
+        }
+      },
+      "s3xta:wild": {
+        "minecraft:tameable": {
+          "probability": 0.3,
+          "tame_event": {
+            "event": "s3xta:tamed",
+            "target": "self"
+          },
+          "tame_items": [
+            "cooked_rabbit"
+          ]
+        }
+      },
+      "s3xta:melee": {
+        "minecraft:attack": {
+          "damage": 5
+        },
+        "minecraft:behavior.delayed_attack": {
+          "priority": 1,
+          "require_complete_path": true,
+          "can_spread_on_fire": true,
+          "reach_multiplier": 2.3,
+          "speed_multiplier": 1.7,
+          "attack_duration": 1.5,//tempo da animacão
+          "hit_delay_pct": 0.46,//tempo do attack na animacão ÷2
+          "min_path_time": 0.1,
+          "cooldown_time": 0.4
+        },
+	    "minecraft:timer": {
+	      "looping": true,
+		  "time": [2, 5],
+		  "time_down_event": {
+		    "event": "s3xta:ranged"
+		  }
+	    }
+      },
+      "s3xta:special": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 1,
+          "speed_multiplier": 0.0,
+          "track_target": true
+        }
+      },
+      "s3xta:flying": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "s3xta:flying_target",
+              "target": "self",
+              "filters": {
+                "test": "has_target",
+                "operator": "==",
+                "value": true
+              }
+            },
+            {
+              "event": "s3xta:ride_flying",
+              "target": "self",
+              "filters": {
+                "test": "rider_count",
+                "operator": "!=",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "minecraft:behavior.circle_around_anchor": {
+          "priority": 3,
+          "radius_change": 1,
+          "radius_adjustment_chance": 0.004,
+          "height_adjustment_chance": 0.002857,
+          "goal_radius": 1,
+          "angle_change": 15,
+          "radius_range": [
+            5,
+            15
+          ],
+          "height_offset_range": [
+            -4,
+            5
+          ],
+          "height_above_target_range": [
+            4,
+            5
+          ]
+        },
+        "minecraft:can_fly": {},
+        "minecraft:navigation.walk": {
+          "can_walk": true,
+          "can_float": true,
+          "can_sink": false,
+          "avoid_water": true,
+          "avoid_damage_blocks": true
+        },
+        "minecraft:movement.glide": {
+          "start_speed": 1,
+          "speed_when_turning": 1.5
+        }
+      },
+      "s3xta:flying_target": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "s3xta:flying",
+              "target": "self",
+              "filters": {
+                "test": "has_target",
+                "operator": "==",
+                "value": false
+              }
+            },
+            {
+              "event": "s3xta:ride_flying",
+              "target": "self",
+              "filters": {
+                "test": "rider_count",
+                "operator": "!=",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "minecraft:flying_speed": {
+          "value": 0.2
+        },
+        "minecraft:movement": {
+		  "value": 0.02
+		},
+	    "minecraft:navigation.float": {
+          "can_path_over_water": true
+        },
+        "minecraft:behavior.float": {
+          "priority": 0
+        },
+        "minecraft:behavior.float_wander": {
+          "priority": 2,
+          "must_reach": true,
+          "xz_dist": 5,
+		  "y_dist": 1,
+		  "y_offset": 1,
+          "float_duration": [ 3.0, 4.0 ]
+        },
+        "minecraft:behavior.look_at_target": {
+          "angle_of_view_horizontal": 180,
+          "angle_of_view_vertical": 180,
+          "look_distance": 64,
+          "probability": 100
+        },
+        "minecraft:can_fly": {},
+        "minecraft:physics": { 
+          "has_gravity": true
+        }
+	  },
+      "s3xta:walking": {
+        "minecraft:variant": {
+          "value": 0
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "event": "s3xta:ride_walking",
+              "target": "self",
+              "filters": {
+                "test": "rider_count",
+                "operator": "!=",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "minecraft:navigation.walk": {
+          "can_walk": true,
+          "can_float": true,
+          "can_sink": false,
+          "can_swim": true,
+          "avoid_water": true,
+          "avoid_damage_blocks": true,
+          "can_path_over_water": true
+        },
+        "minecraft:flying_speed": {
+          "value": 0.1
+        },
+        "minecraft:movement": {
+          "value": 0.25
+        },
+        "minecraft:underwater_movement": {
+          "value": 0.2
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:physics": { 
+          "has_gravity": true
+        }
+      },
+      
+      //tamed
+      "s3xta:tamed_baby": {
+        "minecraft:is_baby": {},
+        "minecraft:health": {
+          "value": 45,
+          "max": 45
+        },
+        "minecraft:scale": {
+          "value": 0.2
+        },
+        "minecraft:healable": {
+          "items": [
+            {
+              "item": "cooked_rabbit",
+              "heal_amount": 5
+            }
+          ]
+        },
+        "minecraft:ageable": {
+          "duration": 5000,
+          "feed_items": [
+            {
+              "item": "cooked_rabbit",
+              "growth": 0.06
+            }
+          ],
+          "grow_up": {
+            "event": "minecraft:ageable_grow_up",
+            "target": "self"
+          }
+        },
+        "minecraft:variable_max_auto_step": {
+          "base_value": 1.5625,
+          "controlled_value": 1.5625,
+          "jump_prevented_value": 0.5625
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 3
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 3
+        }
+      },
+      "s3xta:tamed_adult": {
+        "minecraft:health": {
+          "value": 90,
+          "max": 90
+        },
+        "minecraft:scale": {
+          "value": 1.2
+        },
+        "minecraft:healable": {
+          "items": [
+            {
+              "item": "mutton",
+              "heal_amount": 5
+            },
+            {
+              "item": "chicken",
+              "heal_amount": 5
+            },
+            {
+              "item": "beef",
+              "heal_amount": 5
+            }
+          ]
+        },
+        "minecraft:variable_max_auto_step": {
+          "base_value": 1.5625,
+          "controlled_value": 1.5625,
+          "jump_prevented_value": 0.5625
+        },
+        "minecraft:behavior.player_ride_tamed": {},
+        "minecraft:can_power_jump": {},
+        "minecraft:horse.jump_strength": {
+          "min": 0.5,
+          "max": 0.8
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "rider_can_interact": true,
+          "crouching_skip_interact": true,
+          "family_types": [
+            "player"
+          ],
+          "interact_text": "action.interact.ride.horse",
+          "seats": {
+            "position": [
+              0,
+              1.4,
+              0.7
+            ],
+            "third_person_camera_radius": 5,
+            "camera_relax_distance_smoothing": 5
+          }
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 3
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 3
+        }
+      },
+      "s3xta:tamed": {
+        "minecraft:interact": {
+          "interactions": {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "has_equipment","domain": "hand","subject": "other","value": "minecraft:saddle" },
+                  { "test": "has_component", "operator": "!=", "value": "minecraft:is_saddled" },
+                  { "test": "has_component", "operator": "!=", "value": "minecraft:is_baby" }
+                ]
+              },
+              "event": "s3xta:saddled"
+            },
+            "interact_text": "Colocar Sela",
+            "use_item": true
+          }
+        },
+        "minecraft:navigation.walk": {
+          "can_walk": true,
+          "can_float": true,
+          "can_sink": false,
+          "avoid_water": true,
+          "avoid_damage_blocks": true
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:persistent": {},
+        "minecraft:healable": {
+          "items": [
+            {
+              "item": "mutton",
+              "heal_amount": 5
+            },
+            {
+              "item": "chicken",
+              "heal_amount": 5
+            },
+            {
+              "item": "beef",
+              "heal_amount": 5
+            }
+          ]
+        },
+        "minecraft:behavior.stay_while_sitting": {
+          "priority": 2
+        },
+        "minecraft:leashable": {},
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 3
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 4
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 2,
+          "start_distance": 14,
+          "can_teleport": true,
+          "stop_distance": 3
+        },
+        "minecraft:is_tamed": {}
+      },
+      "s3xta:no_ride": {
+        "minecraft:sittable": {}
+      },
+      "s3xta:ride_walking": {
+        "minecraft:physics": {
+          "has_collision": true,
+          "has_gravity": true
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "test": "rider_count",
+                "operator": "==",
+                "value": 0
+              },
+              "event": "s3xta:no_ride",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "s3xta:ride_flying": {
+        "minecraft:physics": {
+          "has_collision": true,
+          "has_gravity": false
+        },
+        "minecraft:can_fly": {},
+        "minecraft:input_air_controlled": {
+          "backwards_movement_modifier": 0.5,
+          "strafe_speed_modifier": 1
+        },
+        "minecraft:movement": {
+          "value": 1.0
+        },
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "test": "rider_count",
+                "operator": "==",
+                "value": 0
+              },
+              "event": "s3xta:no_ride",
+              "target": "self"
+            },
+            {
+              "filters": {
+                "test": "on_ground",
+                "operator": "==",
+                "value": true
+              },
+              "event": "s3xta:ride_walking",
+              "target": "self"
+            }
+          ]
+        }
+      },
+      "s3xta:saddled": {
+        "minecraft:is_saddled": {},
+        "minecraft:input_ground_controlled": {}
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:type_family": {
+        "family": [
+          "tryple_stryke",
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.5,
+        "height": 1.5
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "entity_attack",
+            "on_damage": {
+              "filters": [
+                {
+                  "test": "is_riding_self",
+                  "subject": "damager",
+                  "value": true
+                }
+              ],
+              "target": "self"
+            },
+            "deals_damage": false
+          },
+          {
+            "cause": "fall",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "has_tag",
+              "subject": "self",
+              "operator": "!=",
+              "value": "caged"
+            },
+            "max_dist": 16
+          }
+        ]
+      },
+      "minecraft:follow_range": {
+        "value": 64,
+        "max": 64
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 14,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 15
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 13,
+        "look_distance": 6,
+        "probability": 0.02
+      },
+      "minecraft:flying_speed": {
+        "value": 2.5
+      },
+      "minecraft:behavior.move_towards_target": {},
+      "minecraft:behavior.look_at_target": {
+        "angle_of_view_horizontal": 180,
+        "angle_of_view_vertical": 180,
+        "look_distance": 0.1,
+        "probability": 100
+      },
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:floats_in_liquid": {},
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "trigger": "s3xta:variant",
+            "add": {
+              "component_groups": [
+                "s3xta:wild",
+                "s3xta:wild_adult",
+                "s3xta:walking",
+                "s3xta:melee"
+              ]
+            },
+            "weight": 50
+          },
+          {
+            "trigger": "s3xta:variant",
+            "add": {
+              "component_groups": [
+                "s3xta:wild",
+                "s3xta:wild_baby",
+                "s3xta:walking",
+                "s3xta:melee"
+              ]
+            },
+            "weight": 50
+          }
+        ]
+      },
+      "minecraft:is_baby": {
+        "add": {
+          "component_groups": [
+            "s3xta:wild",
+            "s3xta:wild_baby",
+            "s3xta:walking",
+            "s3xta:melee"
+          ]
+        }
+      },
+      "s3xta:variant":{
+        "randomize": [
+          {
+            "weight": 10,
+            "set_property": {
+              "s3xta:variant": 0
+            }
+          },
+          {
+            "weight": 10,
+            "set_property": {
+              "s3xta:variant": 1
+            }
+          },
+          {
+            "weight": 10,
+            "set_property": {
+              "s3xta:variant": 2
+            }
+          },
+          {
+            "weight": 10,
+            "set_property": {
+              "s3xta:variant": 3
+            }
+          },
+          {
+            "weight": 10,
+            "set_property": {
+              "s3xta:variant": 4
+            }
+          },
+          {
+            "weight": 10,
+            "set_property": {
+              "s3xta:variant": 5
+            }
+          }
+        ]       
+      },
+      "minecraft:ageable_grow_up": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_component",
+              "operator": "==",
+              "value": "minecraft:is_tamed"
+            },
+            "remove": {
+              "component_groups": [
+                "s3xta:tamed_baby"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "s3xta:no_saddle",
+                "s3xta:tamed",
+                "s3xta:tamed_adult"
+              ]
+            }
+          }
+        ]
+      },
+      "s3xta:melee": {
+        "add": {
+          "component_groups": [
+            "s3xta:melee"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:special"
+          ]
+        }
+      },
+      "s3xta:ranged": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 50,
+                "filters": {
+                  "all_of": [
+                    {"test": "has_target", "value": true},
+                    {"test": "is_variant", "operator": "==", "value": 0},
+                    {"test": "rider_count", "operator": "==", "value": 0},
+                    {"test": "target_distance", "operator": ">=", "value": 3}
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "s3xta:special"
+                  ]
+                },
+                "remove": {
+                  "component_groups": [
+                    "s3xta:melee"
+                  ]
+                },
+                "queue_command": {
+                  "command": [
+                    "scriptevent s3xta:tryple_stryke_special"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      
+      //tamed
+      "s3xta:saddled": {
+        "add": {
+          "component_groups": [
+            "s3xta:saddled"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:no_saddle"
+          ]
+        }
+      },
+      "s3xta:no_saddle": {
+        "remove": {
+          "component_groups": [
+            "s3xta:saddled",
+            "s3xta:ride_walking",
+            "s3xta:ride_flying"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "s3xta:no_saddle",
+            "s3xta:walking"
+          ]
+        }
+      },
+      "s3xta:tamed": {
+        "sequence": [
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_component", "operator": "==", "value": "minecraft:is_baby" }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "s3xta:tamed",
+                "s3xta:tamed_baby",
+                "s3xta:walking",
+                "s3xta:no_ride",
+                "s3xta:melee"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "s3xta:wild",
+                "s3xta:wild_baby"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_component", "operator": "!=", "value": "minecraft:is_baby" }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "s3xta:tamed",
+                "s3xta:tamed_adult",
+                "s3xta:walking",
+                "s3xta:no_ride",
+                "s3xta:melee"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "s3xta:wild",
+                "s3xta:wild_adult"
+              ]
+            }
+          }
+        ]
+      },
+      "s3xta:walking": {
+        "set_property": {
+          "s3xta:flying": false
+        },
+        "add": {
+          "component_groups": [
+            "s3xta:walking"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:ride_walking",
+            "s3xta:ride_flying",
+            "s3xta:flying",
+            "s3xta:flying_target",
+            "s3xta:no_ride"
+          ]
+        }
+      },
+      "s3xta:flying": {
+        "sequence": [
+          {
+            "filters": {
+              "all_of": [
+                { "test": "has_component", "operator": "!=", "value": "minecraft:is_baby" }
+              ]
+            },
+            "set_property": {
+              "s3xta:flying": true
+            },
+            "remove": {
+              "component_groups": [
+                "s3xta:ride_walking",
+                "s3xta:ride_flying",
+                "s3xta:walking",
+                "s3xta:flying_target",
+                "s3xta:no_ride"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "s3xta:flying"
+              ]
+            }
+          }
+        ]
+      },
+      "s3xta:flying_target": {
+        "set_property": {
+          "s3xta:flying": true
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:ride_walking",
+            "s3xta:ride_flying",
+            "s3xta:walking",
+            "s3xta:flying",
+            "s3xta:no_ride"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "s3xta:flying_target"
+          ]
+        }
+      },
+      "s3xta:no_ride": {
+        "set_property": {
+          "s3xta:flying": false
+        },
+        "add": {
+          "component_groups": [
+            "s3xta:no_ride",
+            "s3xta:walking"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:flying",
+            "s3xta:flying_target",
+            "s3xta:ride_walking",
+            "s3xta:ride_flying"
+          ]
+        }
+      },
+      "s3xta:ride_walking": {
+        "set_property": {
+          "s3xta:flying": false
+        },
+        "add": {
+          "component_groups": [
+            "s3xta:ride_walking"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:walking",
+            "s3xta:flying",
+            "s3xta:flying_target",
+            "s3xta:ride_flying",
+            "s3xta:no_ride"
+          ]
+        }
+      },
+      "s3xta:ride_flying": {
+        "set_property": {
+          "s3xta:flying": true
+        },
+        "remove": {
+          "component_groups": [
+            "s3xta:walking",
+            "s3xta:flying",
+            "s3xta:flying_target",
+            "s3xta:ride_walking",
+            "s3xta:no_ride"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "s3xta:ride_flying"
+          ]
+        }
+      }
+    }
+  }
+}

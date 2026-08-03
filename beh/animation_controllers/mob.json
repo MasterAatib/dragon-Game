@@ -1,0 +1,44 @@
+{
+  "format_version":"1.10.0",
+  "animation_controllers":{
+    "controller.animation.dragon_fly2": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "timer.30_0"
+          ],
+          "transitions": [
+            {"1": "q.variant == 0 && !q.has_rider && !q.is_sitting && q.property('wesl3y:flying') == false && q.all_animations_finished"},
+            {"1": "q.variant == 1"},
+            {"2": "q.all_animations_finished"}
+          ]
+        },
+        "1": {
+          "animations": [
+            "timer.15_0"
+          ],
+          "transitions": [
+            {"default": "q.variant == 1 && !q.has_rider && !q.is_sitting && q.all_animations_finished"},
+            {"default": "q.has_rider || q.is_sitting"},
+            {"2": "q.all_animations_finished"}
+          ],
+          "on_entry": [
+            "@s wesl3y:flying"
+          ],
+          "on_exit": [
+            "@s wesl3y:no_ride"
+          ]
+        },
+        "2": {
+          "animations": [
+            "timer.15_0"
+          ],
+          "transitions": [
+            {"default": "q.all_animations_finished"}
+          ]
+        }
+      }
+    }
+  }
+}

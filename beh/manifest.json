@@ -1,0 +1,43 @@
+{
+  "format_version": 2,
+  "header": {
+    "description":"Addon de Dragões",
+    "name": "New Age of Berk (Beh)",
+    "uuid": "fd2002e2-8aa7-44d8-a05e-c69b034c620d",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 90]
+  },
+  "modules": [
+    {
+      "description":"Addon de Dragões",
+	  "type": "data",
+      "uuid": "e76a12ef-de70-4c98-b61a-b49d340b3265",
+      "version": [1, 0, 0]
+    },
+    {
+      "description":"Youtuber:MugiwaraWg",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "e4e9d62d-c772-44cf-b5a0-b1f814b46b6a",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    },
+    {
+      "uuid": "20430130-7cf9-45dc-946e-91173ecd2216",
+      "version": [1, 0, 0]
+    }
+  ]
+}
+
+
+
